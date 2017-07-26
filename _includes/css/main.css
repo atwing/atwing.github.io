@@ -42,13 +42,13 @@ hr.star-primary {
     padding: 0;
     max-width: 250px;
     border: 0;
-    border-top: solid 5px;
+    /* border-top: solid 5px; */
     text-align: center;
 }
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
+    /* content: "\f005"; */
     display: inline-block;
     position: relative;
     top: -.8em;
