@@ -42,7 +42,7 @@ hr.star-primary {
     padding: 0;
     max-width: 250px;
     border: 0;
-    border-top: solid 5px;
+    /* border-top: solid 5px; */
     text-align: center;
 }
 
