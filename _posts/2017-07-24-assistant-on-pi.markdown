@@ -1,7 +1,7 @@
 ---
 layout: default
 date: 2017-07-24
-img: 
+img:
 project-date: July 2017
 category: Home Automation
 title: Home Automation with Voice Commands
@@ -16,5 +16,8 @@ This project contains a wide variety of features among which are:
 - execute shell commands with Google Assistant, IFTTT and Home Assistant
 - switch on/off devices connect directly to wall plug and ceiling lights using relay modules
 
-If you want to use this post as a guide or inspiration for your own projects, I am going to assume that you are already somewhat familiar with Linux systems and the Raspberry Pi, although I will try to not leave out any details on what I did.
+If you want to use this post as a guide or inspiration for your own projects, I am going to assume that you are already somewhat familiar with Linux systems and the Raspberry Pi, although I will try to not leave out any details on what I did. Alright, let's get right to it!
 
+[IMAGE: google assistant + raspberry pi]
+
+To start off, we first need to install the Google Assistant on a Raspberry Pi. Google provides a great guide for the installation: Link
