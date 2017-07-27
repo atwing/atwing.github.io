@@ -20,4 +20,4 @@ If you want to use this post as a guide or inspiration for your own projects, I 
 
 [IMAGE: google assistant + raspberry pi]
 
-To start off, we first need to install the Google Assistant on a Raspberry Pi. Google provides a great guide for the installation: Link
+To start off, we first need to install the Google Assistant on a Raspberry Pi. Google provides a great guide for the installation, I started off [here](https://developers.google.com/assistant/sdk/develop/python/hardware/setup).
