@@ -1,7 +1,7 @@
 ---
 layout: default
 date: 2017-07-24
-img:
+img: default.png
 project-date: July 2017
 category: Home Automation
 title: Home Automation with Voice Commands
