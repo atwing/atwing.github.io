@@ -71,6 +71,5 @@ If you later want to come back and test the Assistant, execute on the Raspberry 
 `$ google-assistant-demo`  
 ![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/google-assistant-demo.png "an image title")*Figure 3: Google Assistant Demo*
 
-
-
+<br><br> 
 Feel free to post questions/comments/suggestions, let me know if you run into any trouble!
