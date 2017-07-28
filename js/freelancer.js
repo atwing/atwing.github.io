@@ -37,6 +37,16 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 // Direct link to modal windows
-if (window.location.hash == "#imprint") {
-     $('#myModal').modal('show');
+/**
+ * Function to open a bootstrap modal based on ID
+ * @param int
+ */
+function directLinkModal(hash) {
+  $(hash).modal('show');
 }
+
+/**
+ * Call the function on window load
+ * @param hash of the window
+ */
+directLinkModal(window.location.hash);
