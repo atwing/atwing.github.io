@@ -33,9 +33,25 @@ To start off, we first need to install the Google Assistant on a Raspberry Pi wh
 Conveniently, I already have a Raspberry Pi 3 Model B with Raspbian Jessie installed which I use for my home surveillance system. I will access my headless Raspberry Pi via [SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/), so except for the power supply no additional wiring will be necessary for now, when using the WiFi connection - gotta save the cable clutter for later!
 With the option to comfortably controll the Raspberry Pi from my notebook, I connect to it via SSH in Terminal.
 
-### Step 2: 
+### Step 2: Audio configuration
 
 TODO: continue with audio configuration
+The audio input and output can be set by editing the file `~/.asoundrc`.
+With the commands `arecord -l` and `aplay -l`, we can find the card/device numbers of the desired input and output devices respectively:
+
+[IMAGE: arecord + aplay list]
+
+Choosing my USB dongle as input and the 3.5mm jack as output, my `.asoundrc` file is changed accordingly:
+
+[IMAGE: content .asoundrc]
+
+A quick test before we continue:
+Test output:
+`$ speaker-test -t wav`
+Test input:
+`$ arecord --duration=5 -f S16_LE --rate=16k ~/test.wav`
+Play recording:
+`$ aplay ~/test.wav`
 
 
 
