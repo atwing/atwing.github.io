@@ -68,7 +68,8 @@ Again, the guide is quite thorough in the [__last step__](https://developers.goo
 
 If you later want to come back and test the Assistant, execute on the Raspberry Pi:  
 `$ source ~/env/bin/activate`  
-`$ google-assistant-demo`  
+`$ google-assistant-demo`
+
 ![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/google-assistant-demo.png "an image title")*Figure 3: Google Assistant Demo*
 
 <br><br> 
