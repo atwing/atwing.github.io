@@ -7,7 +7,7 @@ category: Home Automation
 title: Home Automation with Voice Commands
 ---
 
-With the Google Assistant SDK being released, speech-based home projects received a powerful new component in its arsenal and with this I thought it's about time for me to jump on the home assistant hype train!
+With the Google Assistant SDK being released, speech-based home projects received a powerful new component in its arsenal and with this I thought it's about time for me to jump on the home assistant hype train!  
 The Google Assistant will be implemented on a Raspberry Pi, which makes it a potentially more powerful and much cheaper system than the Google Home device and along with fun and joy we will hopefully learn a thing or two.
 
 This project contains a wide variety of features among which are:
@@ -29,28 +29,28 @@ A quick overview on what components I used for this setup:
 - at least one finger
 
 ### Step 1: Preparation & SSH connection
-To start off, we first need to install the Google Assistant on a Raspberry Pi which will be the main focus of this post. Google provides a great guide for the installation, I started off [here](https://developers.google.com/assistant/sdk/develop/python/hardware/setup).
-Conveniently, I already have a Raspberry Pi 3 Model B with Raspbian Jessie installed which I use for my home surveillance system. I will access my headless Raspberry Pi via [SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/), so except for the power supply no additional wiring will be necessary for now, when using the WiFi connection - gotta save the cable clutter for later!
+To start off, we first need to install the Google Assistant on a Raspberry Pi which will be the main focus of this post. Google provides a great guide for the installation, I started off [here](https://developers.google.com/assistant/sdk/develop/python/hardware/setup).  
+Conveniently, I already have a Raspberry Pi 3 Model B with Raspbian Jessie installed which I use for my home surveillance system. I will access my headless Raspberry Pi via [SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/), so except for the power supply no additional wiring will be necessary for now, when using the WiFi connection - gotta save the cable clutter for later!  
 With the option to comfortably controll the Raspberry Pi from my notebook, I connect to it via SSH in Terminal.
 
 ### Step 2: Audio configuration
 
-TODO: continue with audio configuration
 The audio input and output can be set by editing the file `~/.asoundrc`.
 With the commands `arecord -l` and `aplay -l`, we can find the card/device numbers of the desired input and output devices respectively:
 
-[IMAGE: arecord + aplay list]
+![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/asoundrc-config.png "an image title")
 
 Choosing my USB dongle as input and the 3.5mm jack as output, my `.asoundrc` file is changed accordingly:
 
 [IMAGE: content .asoundrc]
 
-A quick test before we continue:
-Test output:
+Test output:  
 `$ speaker-test -t wav`
-Test input:
+
+Test input:  
 `$ arecord --duration=5 -f S16_LE --rate=16k ~/test.wav`
-Check recording:
+
+Check recording:  
 `$ aplay ~/test.wav`
 
 All good? Onwards!
