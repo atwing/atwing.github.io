@@ -4,7 +4,7 @@ date: 2017-07-24
 img: default.png
 project-date: July 2017
 category: Home Automation
-title: Home Automation with Voice Commands
+title: Voice Controlled Home Automation
 ---
 
 With the Google Assistant SDK being released, speech-based home projects received a powerful new component in its arsenal and with this I thought it's about time for me to jump on the home assistant hype train!  
