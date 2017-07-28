@@ -50,9 +50,12 @@ Test output:
 `$ speaker-test -t wav`
 Test input:
 `$ arecord --duration=5 -f S16_LE --rate=16k ~/test.wav`
-Play recording:
+Check recording:
 `$ aplay ~/test.wav`
 
+All good? Onwards!
+
+### Step 3: Create Google Developer Project & configure Google account
 
 
 
