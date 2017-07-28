@@ -29,8 +29,8 @@ A quick overview on what components I used for this setup:
 - at least one finger
 
 ### Step 1: Preparation & SSH connection
-To start off, we first need to install the Google Assistant on a Raspberry Pi which will be the main focus of this post. Google provides a great guide for the installation, I started off [here](https://developers.google.com/assistant/sdk/develop/python/hardware/setup).  
-Conveniently, I already have a Raspberry Pi 3 Model B with Raspbian Jessie installed which I use for my home surveillance system. I will access my headless Raspberry Pi via [SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/), so except for the power supply no additional wiring will be necessary for now, when using the WiFi connection - gotta save the cable clutter for later!  
+To start off, we first need to install the Google Assistant on a Raspberry Pi which will be the main focus of this post. Google provides a great guide for the installation, I started off [__here__](https://developers.google.com/assistant/sdk/develop/python/hardware/setup).  
+Conveniently, I already have a Raspberry Pi 3 Model B with Raspbian Jessie installed which I use for my home surveillance system. I will access my headless Raspberry Pi via [__SSH__](https://www.raspberrypi.org/documentation/remote-access/ssh/), so except for the power supply no additional wiring will be necessary for now, when using the WiFi connection - gotta save the cable clutter for later!  
 With the option to comfortably controll the Raspberry Pi from my notebook, I connect to it via SSH in Terminal.
 
 ### Step 2: Audio configuration
@@ -57,7 +57,20 @@ All good? Onwards!
 
 ### Step 3: Create Google Developer Project & configure Google account
 
+This step is fairly straight-forward: [__follow this__](https://developers.google.com/assistant/sdk/develop/python/config-dev-project-and-account)  
+We need to create a Google Developer Project, grant the Raspberry Pi access to the Google Assistant API by downloading a client secret JSON file. Since I downloaded the JSON file on my notebook, I have to transfer the file on my Raspberry Pi via SFTP (e.g. using FileZilla) or alternatively by simply executing in the Terminal:  
+`$ scp <path to file>/client_secret_<client-id>.json pi@<raspberry-pi-ip-address>:/home/pi/`  
+After switching on all necessary activity controls, we arrive at the final step.
+
+### Step 4: Install Google Assistant SDK and run demo
+
+Again, the guide is quite thorough in the [__last step__](https://developers.google.com/assistant/sdk/develop/python/run-sample). If the Assistant responds to the voice command _Hey Google_ or _Ok Google_, we are ready to proceed to the next exciting part! [Start query with a bluetooth remote]({{ site.url }}/#portfolioModal-2)
+
+If you later want to come back and test the Assistant, execute on the Raspberry Pi:  
+`$ source ~/env/bin/activate`  
+`$ google-assistant-demo`  
+![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/google-assistant-demo.png "an image title")*Figure 3: Google Assistant Demo*
 
 
 
-Feel free to post questions/comments/suggestions, I'm excited to hear from you!
+Feel free to post questions/comments/suggestions, let me know if you run into any trouble!
