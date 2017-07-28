@@ -402,10 +402,6 @@ footer .footer-below {
 }
 
 .portfolio-modal .modal-content img {
-    margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content img + em {
     margin-bottom: 0px;
 }
 
