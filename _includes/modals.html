@@ -28,8 +28,15 @@
                                     </strong>
                                 </li>
                             </ul>
-                            {% include comments-new.html %}
-                            {% include comments.html %}
+                            <section class="constrain">
+                              <h3>Write a comment</h3>
+                              {% include comments-new.html %}
+                            </section>
+
+                            <section class="constrain">
+                              <h3>All comments</h3>
+                              {% include comments.html %}
+                            </section>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
