@@ -12,7 +12,7 @@ The Google Assistant will be implemented on a Raspberry Pi, which makes it a pot
 
 This project contains a variety of features among which are:
 - Google Assistant running on a Raspberry Pi (covered in this post)
-- Use a bluetooth remote to initiate request to Google Assistant [**Link**]()
+- Use a bluetooth remote to initiate request to Google Assistant [**Link**](http://www.atwing.net/#portfolioModal-2)
 - Execute shell commands with Google Assistant + IFTTT + Home Assistant with voice commands [**Link**]()
 - Switch on/off devices and ceiling lights with voice commands [**Link**]()
 
@@ -64,7 +64,7 @@ After switching on all necessary activity controls, we arrive at the final step.
 
 ### Step 4: Install Google Assistant SDK and run demo
 
-Again, the guide is quite thorough in the [**last step**](https://developers.google.com/assistant/sdk/develop/python/run-sample). If the Assistant responds to the voice command _Hey Google_ or _Ok Google_, we are ready to proceed to the next exciting part! [**Start query with a bluetooth remote**](http://www.atwing.net/#portfolioModal-2)
+Again, the guide is quite thorough in the [**last step**](https://developers.google.com/assistant/sdk/develop/python/run-sample). If the Assistant responds to the voice command _Hey Google_ or _Ok Google_, we are ready to proceed to the next exciting part: [**Start a conversation with a bluetooth remote**](http://www.atwing.net/#portfolioModal-2)
 
 If you later want to come back and test the Assistant, execute on the Raspberry Pi:  
 `$ source ~/env/bin/activate`  
