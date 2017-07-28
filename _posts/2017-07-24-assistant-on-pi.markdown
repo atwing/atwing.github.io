@@ -64,7 +64,7 @@ After switching on all necessary activity controls, we arrive at the final step.
 
 ### Step 4: Install Google Assistant SDK and run demo
 
-Again, the guide is quite thorough in the [__last step__](https://developers.google.com/assistant/sdk/develop/python/run-sample). If the Assistant responds to the voice command _Hey Google_ or _Ok Google_, we are ready to proceed to the next exciting part! [Start query with a bluetooth remote]({{ site.baseurl }}/#portfolioModal-2)
+Again, the guide is quite thorough in the [__last step__](https://developers.google.com/assistant/sdk/develop/python/run-sample). If the Assistant responds to the voice command _Hey Google_ or _Ok Google_, we are ready to proceed to the next exciting part! [Start query with a bluetooth remote](http://www.atwing.net/#portfolioModal-2)
 
 If you later want to come back and test the Assistant, execute on the Raspberry Pi:  
 `$ source ~/env/bin/activate`  
