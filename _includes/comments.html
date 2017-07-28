@@ -42,9 +42,9 @@
 
 <!-- Comment form -->
 <p>
-  <h3>Post a comment:</h3>
-  <form method="POST" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
-    <input name="options[redirect]" type="hidden" value="http://idiologos.netlify.com">
+  <h3>Post a comment</h3>
+  <form method="POST" action="https://api.staticman.net/v2/entry/atwing/atwing.github.io/master">
+    <input name="options[redirect]" type="hidden" value="http://atwing.net">
     <input name="options[slug]" type="hidden" value="{{ page.slug }}">
       <div>
       <legend>Name</legend>
@@ -64,7 +64,7 @@
     </div>
     <div>
       <legend><em>Comments will appear after moderation.</em></legend>
-      <button type="submit">Submit Comment</button>
+      <button type="submit">Submit</button>
     </div>
   </form>
 </p>
