@@ -35,3 +35,8 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+// Direct link to modal windows
+if (window.location.hash == "#imprint") {
+     $('#myModal').modal('show');
+}
