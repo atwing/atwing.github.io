@@ -1,6 +1,6 @@
 # Site settings
 title: Anthony's Blog
-email: mail@atwing.net
+email: anthonynguyen@gmx.net
 url: http://www.atwing.net
 description: "Machine Learning, Telecommunication, Home Automation, Information Security"
 keywords: "Blog, Machine Learning, Telecommunication, Home Automation, Information Security, Raspberry Pi, Google Assistant SDK, Speech Technology, Computer Vision"
@@ -48,11 +48,11 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-#  - line: 
-#  - line: 
+#  - line:
+#  - line:
 
 # Credits content
-credits: 
+credits:
 
 # Build settings
 markdown: kramdown
