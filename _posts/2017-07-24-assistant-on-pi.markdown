@@ -35,7 +35,7 @@ With the option to comfortably controll the Raspberry Pi from my notebook, I con
 
 ### Step 2: 
 
-
+TODO: continue with audio configuration
 
 
 
