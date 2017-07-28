@@ -18,7 +18,7 @@ This project contains a variety of features among which are:
 
 If you want to use this post as a guide or inspiration for your own projects, I am going to assume that you are already somewhat familiar with Linux systems and the Raspberry Pi, although I will try to mention all important details on what I did. Alright, let's get right to it!
 
-[IMAGE: google assistant+raspberry pi or RL photo of setup
+[IMAGE: google assistant+raspberry pi or RL photo of setup]
 
 A quick overview on what components I used for this setup:
 - Raspberry Pi 3 Model B running Raspbian Jessie
