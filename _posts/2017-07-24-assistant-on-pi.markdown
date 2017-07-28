@@ -38,11 +38,11 @@ With the option to comfortably controll the Raspberry Pi from my notebook, I con
 The audio input and output can be set by editing the file `~/.asoundrc`.
 With the commands `arecord -l` and `aplay -l`, we can find the card/device numbers of the desired input and output devices respectively:
 
-![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/input-output-devices.png "an image title")*Figure 1: List of input and output devices*
+![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/input-output-devices.png "an image title")<br>*Figure 1: List of input and output devices*
 
 Choosing my USB dongle as input and the 3.5mm jack as output, my `.asoundrc` file is changed accordingly:
 
-![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/asoundrc-config.png "an image title")*Figure 2: Content of `.asoundrc`*
+![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/asoundrc-config.png "an image title")<br>*Figure 2: Content of `.asoundrc`*
 
 Test output:  
 `$ speaker-test -t wav`
@@ -70,7 +70,7 @@ If you later want to come back and test the Assistant, execute on the Raspberry 
 `$ source ~/env/bin/activate`  
 `$ google-assistant-demo`
 
-![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/google-assistant-demo.png "an image title")*Figure 3: Google Assistant Demo*
+![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/google-assistant-demo.png "an image title")<br>*Figure 3: Google Assistant Demo*
 
 <br><br> 
 Feel free to post questions/comments/suggestions, let me know if you run into any trouble!
