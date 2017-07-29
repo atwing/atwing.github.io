@@ -459,7 +459,7 @@ footer .footer-below {
     -webkit-transform: translateZ(0);
 }
 
-.author__avatar {
+.author-avatar {
     display: block;
     vertical-align: top;
     width: 125px;
@@ -468,20 +468,20 @@ footer .footer-below {
 }
 
 @media (min-width: 64em) {
-    .author__avatar {
+    .author-avatar {
         display: block;
         width: auto;
         height: auto
     }
 }
 
-.author__avatar img {
+.author-avatar img {
     max-width: 250px;
     border-radius: 50%
 }
 
 @media (min-width: 64em) {
-    .author__avatar img {
+    .author-avatar img {
         padding: 5px;
     }
 }
