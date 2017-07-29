@@ -464,8 +464,8 @@ footer .footer-below {
 .author-avatar {
     display: block;
     vertical-align: top;
-    width: 125px;
-    height: 125px;
+    width: 270px;
+    height: 270px;
     margin: 0 auto;
 }
 
@@ -478,7 +478,7 @@ footer .footer-below {
 }
 
 .author-avatar img {
-    max-width: 250px;
+    max-width: 270px;
     border-radius: 50%
 }
 
