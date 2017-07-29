@@ -1,11 +1,12 @@
 # Site settings
 title: Anthony's Blog
 email: anthonynguyen@gmx.net
-url: http://www.atwing.net
+url: https://www.atwing.net
 description: "Machine Learning, Telecommunication, Home Automation, Information Security"
 keywords: "Blog, Machine Learning, Telecommunication, Home Automation, Information Security, Raspberry Pi, Google Assistant SDK, Speech Technology, Computer Vision"
 skills: Machine Learning Engineer
 meta_author: Anthony T. Nguyen
+location: San Francisco - Stockholm - Frankfurt
 
 # Google webmaster tools
 google_verify:
@@ -21,7 +22,7 @@ contact: static
 
 # If you use disqus you need disqus shortname
 # https://help.disqus.com/customer/portal/articles/466208
-disqus_shortname: bushinji
+disqus_shortname:
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
