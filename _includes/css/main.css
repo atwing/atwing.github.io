@@ -458,3 +458,30 @@ footer .footer-below {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
+
+.author__avatar {
+    display: block;
+    vertical-align: top;
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+}
+
+@media (min-width: 64em) {
+    .author__avatar {
+        display: block;
+        width: auto;
+        height: auto
+    }
+}
+
+.author__avatar img {
+    max-width: 250px;
+    border-radius: 50%
+}
+
+@media (min-width: 64em) {
+    .author__avatar img {
+        padding: 5px;
+    }
+}
