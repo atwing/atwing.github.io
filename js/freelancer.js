@@ -50,3 +50,14 @@ function directLinkModal(hash) {
  * @param hash of the window
  */
 directLinkModal(window.location.hash);
+
+// hide scroll-top button after scrolling 100px down
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 100) {
+        $('.visible-sm').fadeIn();
+    } else {
+        $('.visible-sm').fadeOut();
+    }
+
+});

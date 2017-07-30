@@ -44,8 +44,13 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+<!-- Custom CSS -->
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="{{ "/style.css" }}">
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
 <!--[if lte IE 9]>
  <style>
     /* old IE unsupported flexbox fixes */
@@ -68,6 +73,7 @@
 <![endif]-->
    <meta name="theme-color" content="#2c3e50">
 
+<!-- Navigation -->
    {% include nav-blog.html %}
 
 <div id="main" role="main">
