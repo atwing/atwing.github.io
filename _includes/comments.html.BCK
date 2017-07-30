@@ -1,0 +1,59 @@
+<hr>
+
+<!-- Static comments -->
+<!-- Credits go to: http://idiologos.netlify.com/2017/03/20/jekyll-and-staticman.html  -->
+
+{% if site.data.comments[page.slug] %}
+
+  <p>
+    <h3>
+    {% if site.data.comments[page.slug].size > 1 %}
+      {{ site.data.comments[page.slug] | size }}
+    {% endif %}
+    Comments:
+    </h3>
+  </p>
+
+  <hr>
+
+  {% assign comments = site.data.comments[page.slug] | sort %}
+
+  <p>
+    {% for comment in comments %}
+      <br>
+      <legend><strong>{{ comment[1].name }}</strong></legend>
+      <em>{{ comment[1].date | date: "%d %B %Y" }}</em>
+      <p>{{ comment[1].message | markdownify }}</p>
+      <hr>
+    {% endfor %}
+  </p>
+{% endif %}
+
+<!-- Comment form -->
+<p>
+  <h3>Post a comment</h3>
+  <form method="POST" action="https://api.staticman.net/v2/entry/atwing/atwing.github.io/master">
+    <input name="options[redirect]" type="hidden" value="http://atwing.net">
+    <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+      <div>
+      <legend>Name</legend>
+      <input name="fields[name]" type="text">
+    </div>
+    <div>
+      <legend>E-mail (optional)</legend>
+      <input name="fields[email]" type="email">
+    </div>
+    <div>
+      <legend>Website (optional)</legend>
+      <input name="fields[url]" type="url">
+    </div>
+    <div>
+      <legend>Message (<a href="https://kramdown.gettalong.org/syntax.html">Markdown</a> supported)</legend>
+      <textarea style="width:100%" name="fields[message]" rows="12"></textarea>
+    </div>
+    <div>
+      <legend><em>Comments will appear after moderation.</em></legend>
+      <button type="button" class="btn btn-default btn-lg">Submit</button>
+    </div>
+  </form>
+</p>

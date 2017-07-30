@@ -1,75 +1,22 @@
-# Site settings
-title: Anthony T. Nguyen
-email: anthonynguyen@gmx.net
-url: https://www.atwing.net
-description: "Machine Learning, Telecommunication, Home Automation, Information Security"
-keywords: "Blog, Machine Learning, Telecommunication, Home Automation, Information Security, Raspberry Pi, Google Assistant SDK, Speech Technology, Computer Vision"
-skills: Machine Learning Engineer
-meta_author: Anthony T. Nguyen
-location: San Francisco - Stockholm - Frankfurt
-author-avatar: img/profile.jpg
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
 
-# Google webmaster tools
-google_verify:
-
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
-
-# Contact form:
-# - static : pass through formspree.io to validate email sending
-# - disqus : replace contact form by disqus thread
-# - comment the line below if you want to stick with the default PHP contact form
-contact: static
-
-# If you use disqus you need disqus shortname
-# https://help.disqus.com/customer/portal/articles/466208
-disqus_shortname:
-
-# Color settings (hex-codes without the leading hash-tag)
-color:
-  primary: 6F8398 #6F8398
-  primary-rgb: "111,131,152" #"111,131,152"
-  secondary: 2c3e50 #FD6E8A
-  secondary-dark: 233140 #A2122F
-
-# Footer settings
-footer:
-  copyright: Anthony T. Nguyen
-  #location: Location
-  social: Around the Web
-  #credits: Credits
-
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: github
-    url: http://github.com/atwing
-  - title: linkedin
-    url: https://www.linkedin.com/in/atwing
-  - title: key
-    url: https://keybase.io/atwing
-
-# Postal address (add as many lines as necessary)
-address:
-#  - line:
-#  - line:
-
-# Credits content
-credits:
-
-# Build settings
-# markdown: kramdown
-# permalink: pretty
-
-######### MINIMAL MISTAKES _config.yml ###########
 # Site Settings
 locale                   : "en"
+title                    : "Site Title"
 title_separator          : "-"
+name                     : "Your Name"
+description              : "An amazing website."
+url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200 # 200
-
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -116,10 +63,10 @@ facebook:
 og_image                 : # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
-# social:
-#   type                   : # Person or Organization (defaults to Person)
-#   name                   : # If the user or organization name differs from the site's name
-#   links: # An array of links to social media profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
 
 # Analytics
 analytics:
