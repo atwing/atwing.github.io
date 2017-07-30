@@ -1,0 +1,204 @@
+---
+---
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.2.2 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+ <head>
+   <meta charset="utf-8">
+<title> {{site.meta_author}} </title>
+<meta name="description" content=" {{ site.skills }} ">
+<meta name="author" content="{{ site.meta_author }}">
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Jeroen Mols">
+<meta property="og:title" content="Jeroen Mols">
+<link rel="canonical" href="{{ site.url}}/blog/">
+ <meta property="og:url" content="{{ site.url}}/blog/">
+ <meta name="twitter:site" content="@molsjeroen">
+ <meta name="twitter:title" content="Jeroen Mols">
+ <meta name="twitter:description" content=" ">
+ <meta name="twitter:url" content="{{ site.url}}/blog/">
+   <meta name="twitter:card" content="summary">
+   <meta name="twitter:creator" content="@Jeroen Mols">
+<link rel="next" href="{{ site.url}}/blog/page2/">
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : " {{ site.meta_author }} ",
+      "url" : "{{ site.url }}",
+      "sameAs" : ["https://twitter.com/","https://www.linkedin.com/in/","https://plus.google.com/","https://github.com/","https://speakerdeck.com/","https://stackoverflow.com/"]
+    }
+  </script>
+ <meta name="google-site-verification" content="{{site.google-site-verification}}" />
+<link href="atom.xml" type="application/atom+xml" rel="alternate" title="Feed">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="{{ "/style.css" }}">
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+<!--[if lte IE 9]>
+ <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+ </style>
+<![endif]-->
+<meta http-equiv="cleartype" content="on">
+ </head>
+ <body class="layout--home">
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+   <meta name="theme-color" content="#2c3e50">
+
+<!-- Navigation -->
+   {% include nav-blog.html %}
+
+<div id="main" role="main">
+ <div class="sidebar sticky">
+<div itemscope itemtype="http://schema.org/Person">
+   <div class="author__avatar">
+        <img src="{{ site.author-avatar }}" class="author__avatar" alt="{{ site.meta_author }}" itemprop="image">
+   </div>
+ <div class="author__content">
+   <h3 class="author__name" itemprop="name"> {{site.meta_author}} </h3>
+     <p class="author__bio" itemprop="description">
+        {{ site.skills }}
+     </p>
+ </div>
+ <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+   <ul class="author__urls social-icons">
+       <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> <span itemprop="name"> {{site.location}} </span>
+       </li>
+       <li>
+          <a href="https://twitter.com/" itemprop="sameAs">
+            <i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+       </li>
+       <li>
+          <a href="https://plus.google.com/" itemprop="sameAs">
+            <i class="fa fa-fw fa-google-plus-square" aria-hidden="true"></i> Google+
+          </a>
+       </li>
+       <li>
+          <a href="https://www.linkedin.com/in/" itemprop="sameAs">
+            <i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> LinkedIn
+          </a>
+       </li>
+       <li>
+          <a href="https://github.com/" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+       </li>
+       <li>
+          <a href="https://www.stackoverflow.com/" itemprop="sameAs">
+            <i class="fa fa-fw fa-stack-overflow" aria-hidden="true"></i> Stackoverflow
+          </a>
+       </li>
+         <li>
+            <a href="https://www.youtube.com/" itemprop="sameAs">
+              <i class="fa fa-fw fa-youtube-square" aria-hidden="true"></i> YouTube
+            </a>
+         </li>
+ <li>
+    <a href="https://speakerdeck.com/" itemprop="sameAs">
+      <i class="fa fa-line-chart" aria-hidden="true"></i> Speaker Deck
+    </a>
+ </li>
+   </ul>
+ </div>
+</div>
+ </div>
+ <div class="archive">
+     <h1 class="page__title"></h1>
+   <h3 class="archive__subtitle">Recent Posts</h3>
+
+<div class="list__item" style="position: relative">
+ <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+   <div style="position:relative;">
+       <div class="archive__item-teaser" style="background-image: url(https://jeroenmols.com/img/blog/java8language/java8language.jpg)"></div>
+        <a href="" rel="permalink">
+         <div class="archive__item-teaser-overlay"></div>
+        </a>
+   <div class="archive__item_titlecontainer">
+       <h2 class="archive__item-title" itemprop="headline">
+            <a href="" rel="permalink">Embracing Java 8 language features
+</a>
+       </h2>
+       <h3 class="archive__subtitle">21 Jul 2017</h3>
+   </div>
+ </div>
+     <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i>
+  4 minute read
+</p>
+   <p class="archive__item-excerpt" itemprop="description">For years Android developers have been limited to Java 6 features. While RetroLambda or the experimental Jack toolchain would help, proper support from Googl...</p>
+ </article>
+</div>
+
+
+
+<nav class="pagination">
+ <ul>
+   <li><a href="#" class="disabled"><span aria-hidden="true">Previous</span></a></li>
+     <li><a href="#" class="disabled current">1</a></li>
+       <li><a href="blog/">2</a></li>
+     <li><a href="blog/">3</a></li>
+     <li><a href="blog/">Next</a></li></a></li>
+ </ul>
+</nav>
+ </div>
+</div>
+   <div class="page__footer">
+     <footer>
+       <div class="page__footer-follow">
+ <ul class="social-icons">
+     <li><strong>Follow:</strong></li>
+     <li><a href="https://twitter.com/"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+     <li><a href="http://github.com/"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+   <li><a href="atom.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+ </ul>
+</div>
+<div class="page__footer-copyright">&copy; 2017 {{ site.meta_author }}. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+     </footer>
+   </div>
+    <script src="assets/js/main.min.js"></script>
+  <script type="text/javascript">
+  /*
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount',  'UA-103581731-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  */
+</script>
+
+{% include js.html %}
+ </body>
+</html>
