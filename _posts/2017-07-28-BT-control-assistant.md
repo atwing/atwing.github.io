@@ -2,7 +2,7 @@
 layout: default
 modal-id: bt-remote
 date: 2017-07-28
-img: default.png
+img: teaser_bluethooth.png
 project-date: July 2017
 category: Home Automation
 title: Start Google Assistant via Bluetooth remote
