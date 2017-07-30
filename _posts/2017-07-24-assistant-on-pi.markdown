@@ -2,7 +2,7 @@
 layout: default
 modal-id: assistant-pi
 date: 2017-07-24
-img: teaser_rasp_bubble.png
+img: teaser_assistant_pi.png
 project-date: July 2017
 category: Home Automation
 title: Voice Controlled Home Automation
