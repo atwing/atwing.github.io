@@ -1,15 +1,17 @@
 # main links
 main:
-  - title: "Posts"
-    url: /year-archive/
+  # - title: "Posts"
+  #   url: /year-archive/
+  - title: "Blog"
+    url: /blog/
   - title: "Categories"
     url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "Pages"
-    url: /page-archive/
-  - title: "Collections"
-    url: /collection-archive/
+  # - title: "Tags"
+  #   url: /tags/
+  # - title: "Pages"
+  #   url: /page-archive/
+  # - title: "Collections"
+  #   url: /collection-archive/
   # - title: "External Link"
   #   url: https://google.com
   # - title: "About"
