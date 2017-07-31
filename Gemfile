@@ -9,11 +9,11 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-# gem "github-pages", group: :jekyll_plugins
+gem "github-pages", group: :jekyll_plugins
 
 # To upgrade, run `bundle update`.
 
-gem "jekyll", "~> 3.3.0"
+# gem "jekyll", "~> 3.3.0"
 gem "minimal-mistakes-jekyll"
 
 # If you have any plugins, put them here!
