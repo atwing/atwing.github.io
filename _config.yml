@@ -130,10 +130,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Anthony T. Nguyen"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "Machine Learning Engineer trying to give back the enthusiasm received from the Open Source & DIY community
+  location         : "San Francisco - Stockholm - Frankfurt"
   email            :
   uri              :
   bitbucket        :
@@ -142,13 +142,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : atwing
   gitlab           :
   google_plus      :
-  keybase          :
+  keybase          : atwing
   instagram        :
   lastfm           :
-  linkedin         :
+  linkedin         : atwing
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
