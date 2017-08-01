@@ -14,21 +14,19 @@
     {% include head/custom.html %}
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+  <body id="page-top" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
 
     {% include browser-upgrade.html %}
-    {% include masthead.html %}
+    <!-- {% include masthead.html %} -->
+    {% include nav-blog.html %}
 
     {{ content }}
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer-mm.html %}
-      </footer>
-    </div>
+    {% include footer/custom.html %}
+    {% include footer.html %}
 
     {% include scripts.html %}
+    {% include js.html %}
 
   </body>
 </html>

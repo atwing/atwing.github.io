@@ -8,6 +8,7 @@ skills: Machine Learning Engineer
 meta_author: Anthony T. Nguyen
 location: San Francisco - Stockholm - Frankfurt
 author-avatar: img/profile.jpg
+intro-text: "Hi, I'm Anthony"
 
 # Google webmaster tools
 google_verify:
@@ -31,6 +32,7 @@ color:
   primary-rgb: "111,131,152" #"111,131,152"
   secondary: 2c3e50 #FD6E8A
   secondary-dark: 233140 #A2122F
+  nav-back: ffffff
 
 # Footer settings
 footer:
