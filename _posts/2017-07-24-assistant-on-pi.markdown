@@ -5,7 +5,10 @@ img: teaser_assistant_pi.png
 project-date: July 2017
 category: Home Automation
 title: Voice Controlled Home Automation
+excerpt: With the Google Assistant SDK released three months ago, home projects have received a great skill set. In this project the Google Assistant is implemented on a Raspberry Pi to later control switchable devices such as fans, lights, computers using voice commands.
 ---
+
+{% include toc title="Contents" icon="list" %}
 
 With the Google Assistant SDK being released, speech-based home projects received a powerful new component in its arsenal and with this I thought it's about time for me to jump on the home assistant hype train!  
 The Google Assistant will be implemented on a Raspberry Pi, which makes it a potentially more powerful and much cheaper system than the Google Home device and along with fun and joy we will hopefully learn a thing or two.
