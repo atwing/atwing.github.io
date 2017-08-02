@@ -15,12 +15,13 @@ The Google Assistant will be implemented on a Raspberry Pi, which makes it a pot
 
 This project contains a variety of features among which are:
 - Google Assistant running on a Raspberry Pi (covered in this post)
-- Use a bluetooth remote to initiate request to Google Assistant [**Link**](http://www.atwing.net/#projectModal-bt-remote)
-- Execute shell commands with Google Assistant + IFTTT + Home Assistant with voice commands [**Link**]()
-- Switch on/off devices and ceiling lights with voice commands [**Link**]()
+- Use a bluetooth remote to initiate request to Google Assistant \([link]({{ site.baseurl }}/home%20automation/BT-control-assistant/)\)
+- Execute shell commands with Google Assistant + IFTTT + Home Assistant with voice commands \([link]()\)
+- Switch on/off devices and ceiling lights with voice commands \([link]({{ site.baseurl }}/home%20automation/light-switch-assistant/)\)
 
 If you want to use this post as a guide or inspiration for your own projects, I am going to assume that you are already somewhat familiar with Linux systems and the Raspberry Pi, although I will try to mention all important details on what I did. Alright, let's get right to it!
 
+### Overview
 <img src="{{ site.baseurl }}/img/2017-07-24-assistant-on-pi/overview_setup.jpg" width="620" />
 
 A quick overview on what components I used for this setup:
@@ -32,8 +33,8 @@ A quick overview on what components I used for this setup:
 - at least one finger
 
 ### Step 1: Preparation & SSH connection
-To start off, we first need to install the Google Assistant on a Raspberry Pi which will be the main focus of this post. Google provides a great guide for the installation, I started off [**here**](https://developers.google.com/assistant/sdk/develop/python/hardware/setup).  
-Conveniently, I already have a Raspberry Pi 3 Model B with Raspbian Jessie installed which I use for my home surveillance system. I will access my headless Raspberry Pi via [**SSH**](https://www.raspberrypi.org/documentation/remote-access/ssh/), so except for the power supply no additional wiring will be necessary for now, when using the WiFi connection - gotta save the cable clutter for later!  
+To start off, we first need to install the Google Assistant on a Raspberry Pi which will be the main focus of this post. Google provides a great guide for the installation, I started off [here](https://developers.google.com/assistant/sdk/develop/python/hardware/setup).  
+Conveniently, I already have a Raspberry Pi 3 Model B with Raspbian Jessie installed which I use for my home surveillance system. I will access my headless Raspberry Pi via [SSH](https://www.raspberrypi.org/documentation/remote-access/ssh/), so except for the power supply no additional wiring will be necessary for now, when using the WiFi connection - gotta save the cable clutter for later!  
 With the option to comfortably control the Raspberry Pi from my notebook, I connect to it via SSH in Terminal.
 
 ### Step 2: Audio configuration
@@ -60,14 +61,14 @@ All good? Onwards!
 
 ### Step 3: Create Google Developer Project & configure Google account
 
-This step is fairly straight-forward: [**follow this**](https://developers.google.com/assistant/sdk/develop/python/config-dev-project-and-account)  
+This step is fairly straight-forward: [follow this](https://developers.google.com/assistant/sdk/develop/python/config-dev-project-and-account)  
 We need to create a Google Developer Project, grant the Raspberry Pi access to the Google Assistant API by downloading a client secret JSON file. Since I downloaded the JSON file on my notebook, I have to transfer the file on my Raspberry Pi via SFTP (e.g. using FileZilla) or alternatively by simply executing in the Terminal:  
 `$ scp <path to file>/client_secret_<client-id>.json pi@<raspberry-pi-ip-address>:/home/pi/`  
 After switching on all necessary activity controls, we arrive at the final step.
 
 ### Step 4: Install Google Assistant SDK and run demo
 
-Again, the guide is quite thorough in the [**last step**](https://developers.google.com/assistant/sdk/develop/python/run-sample). If the Assistant responds to the voice command _Hey Google_ or _Ok Google_, we are ready to proceed to the next exciting part: [**Start a conversation with a bluetooth remote**](http://www.atwing.net/#projectModal-bt-remote)
+Again, the guide is quite thorough in the [last step](https://developers.google.com/assistant/sdk/develop/python/run-sample). If the Assistant responds to the voice command _Hey Google_ or _Ok Google_, we are ready to proceed to the next exciting part: [Start a conversation with a bluetooth remote]({{ site.baseurl }}/home%20automation/BT-control-assistant/)
 
 If you later want to come back and test the Assistant, execute on the Raspberry Pi:  
 `$ source ~/env/bin/activate`  
