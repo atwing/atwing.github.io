@@ -6,9 +6,12 @@ description: "Machine Learning, Telecommunication, Home Automation, Information 
 keywords: "Blog, Machine Learning, Telecommunication, Home Automation, Information Security, Raspberry Pi, Google Assistant SDK, Speech Technology, Computer Vision"
 skills: Machine Learning Engineer
 meta_author: Anthony T. Nguyen
-location: San Francisco - Stockholm - Frankfurt
+location: "San Francisco · Stockholm · Frankfurt"
 author-avatar: img/profile.jpg
 intro-text: "Hi, I'm Anthony"
+
+collections:
+  - portfolio
 
 # Google webmaster tools
 google_verify:
@@ -133,9 +136,9 @@ analytics:
 # Site Author
 author:
   name             : "Anthony T. Nguyen"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/img/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Machine Learning Engineer trying to give back the enthusiasm received from the Open Source & DIY community"
-  location         : "San Francisco - Stockholm - Frankfurt"
+  location         : "San Francisco · Stockholm · Frankfurt"
   email            :
   uri              :
   bitbucket        :
@@ -297,6 +300,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true

@@ -1,5 +1,4 @@
 ---
-layout: default
 modal-id: light_switch_assistant
 date: 2017-07-30
 img: teaser_light_switch.gif

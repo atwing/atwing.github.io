@@ -1,5 +1,4 @@
 ---
-layout: default
 modal-id: bt-remote-assistant
 date: 2017-07-28
 img: teaser_bt_remote.png

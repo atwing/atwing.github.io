@@ -14,7 +14,7 @@
     {% include head/custom.html %}
   </head>
 
-  <body id="page-top" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+  <body id="page-top" class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}" style="font-size: 20px">
 
     {% include browser-upgrade.html %}
     <!-- {% include masthead.html %} -->
