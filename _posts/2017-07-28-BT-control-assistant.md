@@ -27,7 +27,7 @@ Hardware:
 - Notebook running OSX 10.11
 
 Software:
-- a couple of scripts I wrote/modified and uploaded on Github [link](https://github.com/atwing/HomeAI-tutorial)
+- a couple of scripts I wrote/modified and uploaded on Github \([link](https://github.com/atwing/HomeAI-tutorial)\)
 
 ### Step 1: Connect Bluetooth remote
 To link our remote we can use the `bluetoothctl` command in the Terminal. The Bluetooth module should already be installed in the latest release of Raspbian, but if it is not, you can install using `sudo apt-get install pi-bluetooth`.  

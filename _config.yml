@@ -1,11 +1,11 @@
 # Site settings
-title: Anthony T. Nguyen
+title: Anthony Nguyen
 email: anthonynguyen@gmx.net
 url: "https://www.atwing.net"
 description: "Machine Learning, Telecommunication, Home Automation, Information Security"
 keywords: "Blog, Machine Learning, Telecommunication, Home Automation, Information Security, Raspberry Pi, Google Assistant SDK, Speech Technology, Computer Vision"
 skills: Machine Learning Engineer
-meta_author: Anthony T. Nguyen
+meta_author: Anthony Nguyen
 location: "San Francisco · Stockholm · Frankfurt"
 author-avatar: img/profile.jpg
 intro-text: "Hi, I'm Anthony"
@@ -39,7 +39,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: Anthony T. Nguyen
+  copyright: Anthony Nguyen
   #location: Location
   social: Around the Web
   #credits: Credits
@@ -135,7 +135,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Anthony T. Nguyen"
+  name             : "Anthony Nguyen"
   avatar           : "/img/avatar_casual_small.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Machine Learning Engineer who wants to give back the enthusiasm received from the Open Source & DIY community"
   location         : "San Francisco · Stockholm · Frankfurt"
