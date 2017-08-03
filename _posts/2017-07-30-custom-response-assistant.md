@@ -51,7 +51,7 @@ stream.stop_playback() # inactivate audio stream
 
 Add the lines before **assistant.converse()** is executed to get a response whenever the Assistant is about to recording your query.  
 You can find my implementation in the file **pushtotalk_resp.py**.  
-Whenever you trigger a request you should hear your custom response first, before the Assistant starts recording with 'Recording audio request.'.
+Whenever you trigger a request you should hear your custom response first, before the Assistant starts recording with "Recording audio request."
 
 <br><br>
 If you have a better way of playing a custom response, I would love to know! Happy hacking and hopefully see you next time when we integrate IFTTT and Home Assistant to the system to run shell commands via Google Assistant.
