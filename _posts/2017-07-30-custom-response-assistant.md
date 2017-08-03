@@ -32,9 +32,12 @@ wavep = wave.open('beep-response.wav', 'rb')
 num_frames = wavep.getnframes()
 # get frames from wav file
 resp_samples = wavep.readframes(num_frames)
-```
+```  
 
-The sequence of frames contained in **resp_samples** can be written directly onto the **conversation_stream** object in the sample script. But before that we need to activate the audio stream which is a private member of the **conversation_stream** object, meaning we can't activate it directly. And here comes the inelegant part: the audio stream can be activated using the **start_recording()** function. We will hold the input channel with **stop_recording()**, start the output channel with **start_playback()** and are then able to write our frames onto the stream. Finally the stream is inactivated and released for the Assistant to use.
+The sequence of frames contained in **resp_samples** can be written directly onto the **conversation_stream** object in the sample script.
+
+### Step 2: Play audio file
+Before forwarding the frames we need to activate the audio stream which is a private member of the **conversation_stream** object, meaning we can't activate it directly. And here comes the inelegant part: the audio stream can be activated using the **start_recording()** function. We will hold the input channel with **stop_recording()**, start the output channel with **start_playback()** and are then able to write our frames onto the stream. Finally the stream is inactivated and released for the Assistant to use.
 
 ```py
 stream = conversation_stream
@@ -47,11 +50,11 @@ stream.start_playback()
 stream.stop_recording()
 stream.write(resp_frames) # write response frames to output stream
 stream.stop_playback() # inactivate audio stream
-```
+```  
 
 Add the lines before **assistant.converse()** is executed to get a response whenever the Assistant is about to recording your query.  
 You can find my implementation in the file **pushtotalk_resp.py**.  
-Whenever you trigger a request you should hear your custom response first, before the Assistant starts recording with "Recording audio request."
+Whenever you trigger a request you should now hear your custom response first, before the Assistant starts recording with the announcement "Recording audio request".
 
 <br><br>
-If you have a better way of playing a custom response, I would love to know! Happy hacking and hopefully see you next time when we integrate IFTTT and Home Assistant to the system to run shell commands via Google Assistant.
+If you have a better way of playing a custom response, I would love to know! Happy hacking and hopefully I will see you next time when we integrate IFTTT and Home Assistant to the system to run [shell commands via Google Assistant]({{ site.baseurl }}/home%20automation/shell-commands-assistant/).
