@@ -2,7 +2,7 @@
 layout: default
 modal-id: shell_commands_assistant
 date: 2017-08-02
-img:
+img: default.png
 project-date: August 2017
 category: Home Automation
 title: Voice-activated shell commands using Google Assistant, IFTTT and Home Assistant
