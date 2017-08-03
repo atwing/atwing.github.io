@@ -122,10 +122,10 @@ Instead of waiting for any arbitrary key, this is where the `read_loop()` functi
 
 I split our previous Python script into two functions:
 1. `get_BT_device_list()` which will return the Bluetooth device if it was found, else **None**
-2. `wait_for_BT_trigger(device)` the device from the previous function is listens to the keycode **115** (which is the "Enter" key). We execute this in a "try-except" block to handle the **IOError**, so the program doesn't exit once the device disconnects.
+2. `wait_for_BT_trigger(device)` the device from the previous function is listens to the keycode **115** (which is the "Enter" key). We execute this in a "try-except" block to handle the **IOError**, so the program doesn't exit once the device disconnects.  
 
 The first function is called once every 5 seconds to check if the device is connected. Once it is, we will start polling for the trigger key and start a conversation whenever it is pressed.  
-I uploaded the code as `pushtotalk_BT.py`. You will also need `BT_trigger.py` for to handle the Bluetooth remote.
+I uploaded the code as `pushtotalk_BT.py` into the Git repo. You will also need `BT_trigger.py` for to handle the Bluetooth remote.
 
 <figure>
   <img src="/img/2017-07-28-BT-control-assistant/pushtotalk_BT.png" alt="image alt">
