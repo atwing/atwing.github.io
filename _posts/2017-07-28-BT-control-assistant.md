@@ -10,7 +10,7 @@ excerpt: Hotword detection is an impressive and convenient feature, but has with
 
 {% include toc title="Contents" icon="list" %}
 
-After successfully running the Google Assistant on the [Raspberry Pi](http://www.atwing.net/#projectModal-assistant-pi), we proceed with initiating a voice command with a Bluetooth remote. The motive behind this is that even though starting a query with a hotword is a great feature, we might not want the Assistant to always listen - especially if you tend to paranoia like I do. We could instead physically start a conversation and preferably from any part of the house.  
+After successfully running the Google Assistant on the [Raspberry Pi]({{ site.baseurl }}/home%20automation/assistant-on-pi/), we proceed with initiating a voice command with a Bluetooth remote. The motive behind this is that even though starting a query with a hotword is a great feature, we might not want the Assistant to always listen - especially if you tend to paranoia like I do. We could instead physically start a conversation and preferably from any part of the house.  
 One quite cheap solution that I found is using Bluetooth remote buttons that cost less than [two bucks online](https://www.amazon.com/UFCIT-Bluetooth-Wireless-Control-Smartphones/dp/B00LUNAA2O/) and with Bluetooth LE the electricity bill will be happy too. Additionally it is easy to carry around, e.g. with your key ring. Four birds with one stone? So many birds!
 
 ### Overview
@@ -134,4 +134,4 @@ I uploaded the code as `pushtotalk_BT.py` into the Git repo. You will also need 
 
 <br><br>
 This concludes the Bluetooth remote feature implementation. I hope you didn't mind the amount of detail.  
-See you in the next posts where I will add a [custom audio response]() whenever a request is initiated and then combine the Google Assistant with IFTTT and Home Assistant to [run shell commands using your voice]()!
+See you in the next posts where I will add a [custom audio response]({{ site.baseurl }}/home%20automation/custom-response-assistant/) whenever a request is initiated and then combine the Google Assistant with IFTTT and Home Assistant to [run shell commands using your voice]()!
