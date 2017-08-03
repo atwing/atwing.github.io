@@ -94,14 +94,20 @@ Comments to script: We basically load a list of input devices connect to our sys
 
 Apparently the keys simulate the "Enter" key and the "Volume Up" key. But that wont be a problem, as the `grab()` function prevents it from messing with other programs.  
 
-Before we continue, there are a couple of issues we should take note of: The device has to already be connected when starting the script, otherwise it will just quit after checking the device list once. Furthermore, when the connected device moves out of range or is turned off, the function `read_loop()` returns an IOError with "No such device", which also quits the program. We will fix this when we combine it with the Google Assistant. Almost there!
+Before we continue, there are a couple of issues we should take note of: The device has to already be connected when starting the script, otherwise it will just quit after checking the device list once. Furthermore, when the connected device moves out of range or is turned off, the function `read_loop()` returns an **IOError** with "No such device", which also quits the program. We will fix this when we combine it with the Google Assistant. Almost there!
 
 ### Step 3: Triggering a Google Assistant query with the remote
 Google provides us with a nice example to trigger requests pressing any key. Clone [these](https://github.com/googlesamples/assistant-sdk-python/tree/master/google-assistant-sdk/googlesamples/assistant/grpc) files and run `sudo apt-get install portaudio19-dev libffi-dev libssl-dev` and `pip install --upgrade -r requirements.txt` to make sure you have all the necessary dependencies.  
 
 After that, run `python3 pushtotalk.py` from the files you just copied and press any button to test the sample.
 
-[IMAGE: test run of pushtotalk.py]
+<figure>
+  <img src="/img/2017-07-28-BT-control-assistant/test_pushtotalk.png" alt="image alt">
+  <figcaption>Figure 5: Testing <b>pushtotalk.py</b></figcaption>
+</figure>
+
+Note: The SoundDeviceStream warning occurs when recorded frames are lost between reading iterations according to the [**sounddevice** documentation](http://python-sounddevice.readthedocs.io/en/0.3.8/index.html?highlight=overflow#sounddevice.Stream.read). These can be ignored if they only occur when starting the program, as was in my case. If they turn out to be a problem, try increasing the iteration and block size and see if it helps, e.g. `python3 pushtotalk.py --audio-iter-size=4000 --audio_block_size=8000`. I got less frame losses after this but I couldn't eliminate them completely.
+{: .notice--info}
 
 Once this is done, we can modify the script to exclusively listen to our Bluetooth remote. The main part of interest in the script is in line 314:
 ```python
@@ -112,8 +118,20 @@ while True:
     continue_conversation = assistant.converse()
 ...
 ```
-Instead of waiting for any arbitrary key, this is where the `read_loop()` function from the **evdev** package should run. If we receive a trigger event from the remote, e.g. the "Enter" key, the program continues by starting a conversation with the Assistant.
+Instead of waiting for any arbitrary key, this is where the `read_loop()` function from the **evdev** package should run. If we receive a trigger event from the remote, e.g. the "Enter" key, the program continues by starting a conversation with the Assistant.  
 
-[To be continued. Need to sleep!]
+I split our previous Python script into two functions:
+1. `get_BT_device_list()` which will return the Bluetooth device if it was found, else **None**
+2. `wait_for_BT_trigger(device)` the device from the previous function is listens to the keycode **115** (which is the "Enter" key). We execute this in a "try-except" block to handle the **IOError**, so the program doesn't exit once the device disconnects.
+
+The first function is called once every 5 seconds to check if the device is connected. Once it is, we will start polling for the trigger key and start a conversation whenever it is pressed.  
+I uploaded the code as `pushtotalk_BT.py`. You will also need `BT_trigger.py` for to handle the Bluetooth remote.
+
+<figure>
+  <img src="/img/2017-07-28-BT-control-assistant/pushtotalk_BT.png" alt="image alt">
+  <figcaption>Figure 6: She replied "Sorry, I don't understand"... </figcaption>
+</figure>
 
 <br><br>
+This concludes the Bluetooth remote feature implementation. I hope you didn't mind the amount of detail.  
+See you in the next posts where I will add a [custom audio response]() whenever a request is initiated and then combine the Google Assistant with IFTTT and Home Assistant to [run shell commands using your voice]()!
