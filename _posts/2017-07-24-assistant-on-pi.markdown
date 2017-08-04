@@ -48,14 +48,11 @@ Choosing my USB dongle as input and the 3.5mm jack as output, my `.asoundrc` fil
 
 ![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/asoundrc-config.png "an image title")<br>*Figure 2: Content of `.asoundrc`*
 
-Test output:  
-`$ speaker-test -t wav`
-
-Test input:  
-`$ arecord --duration=5 -f S16_LE --rate=16k ~/test.wav`
-
-Check recording:  
-`$ aplay ~/test.wav`
+```sh
+$ speaker-test -t wav # test output
+$ arecord --duration=5 -f S16_LE --rate=16k ~/test.wav # test input
+$ aplay ~/test.wav # check recording
+```
 
 All good? Onwards!
 
@@ -63,7 +60,10 @@ All good? Onwards!
 
 This step is fairly straight-forward: [follow this](https://developers.google.com/assistant/sdk/develop/python/config-dev-project-and-account)  
 We need to create a Google Developer Project, grant the Raspberry Pi access to the Google Assistant API by downloading a client secret JSON file. Since I downloaded the JSON file on my notebook, I have to transfer the file on my Raspberry Pi via SFTP (e.g. using FileZilla) or alternatively by simply executing in the Terminal:  
-`$ scp <path to file>/client_secret_<client-id>.json pi@<raspberry-pi-ip-address>:/home/pi/`  
+```sh
+$ scp <path to file>/client_secret_<client-id>.json pi@<raspberry-pi-ip-address>:/home/pi/
+```
+
 After switching on all necessary activity controls, we arrive at the final step.
 
 ### Step 4: Install Google Assistant SDK and run demo
@@ -71,8 +71,10 @@ After switching on all necessary activity controls, we arrive at the final step.
 Again, the guide is quite thorough in the [last step](https://developers.google.com/assistant/sdk/develop/python/run-sample). If the Assistant responds to the voice command _Hey Google_ or _Ok Google_, we are ready to proceed to the next exciting part: [Start a conversation with a bluetooth remote]({{ site.baseurl }}/home%20automation/BT-control-assistant/)
 
 If you later want to come back and test the Assistant, execute on the Raspberry Pi:  
-`$ source ~/env/bin/activate`  
-`$ google-assistant-demo`
+```sh
+$ source ~/env/bin/activate
+$ google-assistant-demo
+```
 
 ![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/google-assistant-demo.png "an image title")<br>*Figure 3: Google Assistant Demo*
 
