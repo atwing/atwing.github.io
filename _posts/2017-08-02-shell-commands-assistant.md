@@ -150,7 +150,7 @@ Note: If Home Assistant did not properly execute the shell command, check if hom
 
 Almost there! Now that we got the shell command service running, we only need to link IFTTT with Home Assistant & Google Assistant and finally create an IFTTT applet to run the whole setup.
 
-### Step 3:
+### Step 3: Link the Good, the Bad and the Ugly
 
 
 [More coming soon: link Home Assistant with IFTTT and Google Assistant, trigger shell command service by Google Assistant. We are so close!]
