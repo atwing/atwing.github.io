@@ -148,6 +148,9 @@ Note: If Home Assistant did not properly execute the shell command, check if hom
 [IMAGE: screenshot of ls -lh in /home/homeassistant/.homeassistant/]
 {: .notice--info}
 
+Too many notes: If you want to boot your computer using a shell command, there are a lot of online guides on how to set up Wake-on-LAN. I am using the [**wakeonlan**](https://packages.debian.org/search?keywords=wakeonlan) package for example. I could write a quick guide on this too on demand.
+{: .notice--info}
+
 Almost there! Now that we got the shell command service running, we only need to link IFTTT with Home Assistant & Google Assistant and finally create an IFTTT applet to run the whole setup.
 
 ### Step 3: Link the Good, the Bad and the Ugly
