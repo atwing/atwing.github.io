@@ -22,7 +22,10 @@ This project contains a variety of features among which are:
 If you want to use this post as a guide or inspiration for your own projects, I am going to assume that you are already somewhat familiar with Linux systems and the Raspberry Pi, although I will try to mention all important details on what I did. Alright, let's get right to it!
 
 ### Overview
-<img src="{{ site.baseurl }}/img/2017-07-24-assistant-on-pi/overview_setup.jpg" width="620" />
+<figure>
+  <img src="{{ site.baseurl }}/img/2017-07-24-assistant-on-pi/overview_setup.jpg" width="620" />
+  <figcaption>Figure 1: More cables than components</figcaption>
+</figure>
 
 A quick overview on what components I used for this setup:
 - Raspberry Pi 3 Model B running Raspbian Jessie
@@ -42,11 +45,17 @@ With the option to comfortably control the Raspberry Pi from my notebook, I conn
 The audio input and output can be set by editing the file `~/.asoundrc`.
 With the commands `arecord -l` and `aplay -l`, we can find the card/device numbers of the desired input and output devices respectively:
 
-![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/input-output-devices.png "an image title")<br>*Figure 1: List of input and output devices*
+<figure>
+  <img src="{{ site.baseurl }}/img/2017-07-24-assistant-on-pi/input-output-devices.png"/>
+  <figcaption>Figure 2: List of input and output devices</figcaption>
+</figure>
 
 Choosing my USB dongle as input and the 3.5mm jack as output, my `.asoundrc` file is changed accordingly:
 
-![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/asoundrc-config.png "an image title")<br>*Figure 2: Content of `.asoundrc`*
+<figure>
+  <img src="{{ site.baseurl }}/img/2017-07-24-assistant-on-pi/asoundrc-config.png"/>
+  <figcaption>Figure 3: Content of `.asoundrc`</figcaption>
+</figure>
 
 ```sh
 $ speaker-test -t wav # test output
@@ -76,7 +85,10 @@ $ source ~/env/bin/activate
 $ google-assistant-demo
 ```
 
-![an image alt text]({{ site.baseurl }}/img/2017-07-24-assistant-on-pi/google-assistant-demo.png "an image title")<br>*Figure 3: Google Assistant Demo*
+<figure>
+  <img src="{{ site.baseurl }}/img/2017-07-24-assistant-on-pi/google-assistant-demo.png"/>
+  <figcaption>Figure 4: Google Assistant Demo</figcaption>
+</figure>
 
 <br><br>
 Feel free to post questions/comments/suggestions, let me know if you run into any trouble!
