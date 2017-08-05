@@ -54,7 +54,7 @@ Choosing my USB dongle as input and the 3.5mm jack as output, my `.asoundrc` fil
 
 <figure>
   <img src="{{ site.baseurl }}/img/2017-07-24-assistant-on-pi/asoundrc-config.png"/>
-  <figcaption>Figure 3: Content of `.asoundrc`</figcaption>
+  <figcaption>Figure 3: Content of <b>.asoundrc</b></figcaption>
 </figure>
 
 ```sh
