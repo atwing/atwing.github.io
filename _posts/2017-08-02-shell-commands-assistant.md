@@ -1,5 +1,5 @@
 ---
-modal-id: shell_commands_assistant
+modal-id: shell-commands-assistant
 date: 2017-08-02
 img:
 alt: image-alt
@@ -81,11 +81,10 @@ Or alternatively simply run:
 $ sudo -u homeassistant -H /srv/homeassistant/bin/hass
 ```
 
-To see if the Home Assistant server is running, launch `http://<rasperry-pi-ip>:8123` on another computer in your web browser or `http://localhost:8123` if your Raspberry Pi has a GUI and a web browser.
+To see if the Home Assistant server is running, launch `http://<Rasperry-Pi-IP>:8123` on another computer in your web browser or `http://localhost:8123` if your Raspberry Pi has a GUI and a web browser.
 
-[IMAGE: screenshot of http://localhost:8123]
 <figure>
-  <img src="" alt="image alt">
+  <img src="/img/2017-08-02-shell-commands-assistant/HA_web_interface.png" alt="image alt">
   <figcaption>Figure 1: Home Assistant, up and ready </figcaption>
 </figure>
 
@@ -134,26 +133,69 @@ test_cmd: touch /home/homeassistant/.homeassistant/test.txt
 Save and reboot your Home Assistant server.  
 Log into the web interface with the password you wrote into `configuration.yaml`. In the sidebar on the left under **Developer Tools**, click the left-most button which reads "Services".
 
-[IMAGE: Screenshot of Home Assistant Web Interface with Services page open]
+<figure>
+  <img src="/img/2017-08-02-shell-commands-assistant/HA_services.png" alt="image alt">
+  <figcaption>Figure 2: Services menu of Home Assistant web interface</figcaption>
+</figure>
 
 After choosing `shell_command` in **Domain** you should be able to see and select your custom shell command, e.g. `test_cmd`. Test the shell command by clicking `CALL SERVICE` down below and check if the shell command was executed.
 
-[IMAGE: screenshot of text.txt created in /home/homeassistant/.homeassistant/]
 <figure>
-  <img src="" alt="image alt">
-  <figcaption>Figure 3: File <b>test.txt</b> created by shell command <i>test_cmd</i></figcaption>
+  <img src="/img/2017-08-02-shell-commands-assistant/HA_test_shell_command.png" alt="image alt">
+  <figcaption>Figure 3: File <b>test.txt</b> sucessfully created by shell command <i>test_cmd</i></figcaption>
 </figure>
 
 Note: If Home Assistant did not properly execute the shell command, check if homeassistant has the ownership of all necessary files.  
 [IMAGE: screenshot of ls -lh in /home/homeassistant/.homeassistant/]
 {: .notice--info}
 
-Too many notes: If you want to boot your computer using a shell command, there are a lot of online guides on how to set up Wake-on-LAN. I am using the [**wakeonlan**](https://packages.debian.org/search?keywords=wakeonlan) package for example. I could write a quick guide on this too on demand.
+Too many notes: If you want to boot your computer using a shell command, there are a lot of online guides on how to set up Wake-on-LAN. I am using the [**wakeonlan**](https://packages.debian.org/search?keywords=wakeonlan) package for example. I could write a quick guide on this too on demand, although in the end the exact details depend on your OS, network adapter and motherboard.
 {: .notice--info}
 
 Almost there! Now that we got the shell command service running, we only need to link IFTTT with Home Assistant & Google Assistant and finally create an IFTTT applet to run the whole setup.
 
 ### Step 3: Link the Good, the Bad and the Ugly
 
+1. Head over to the [IFTTT web page](https://ifttt.com/) and create an account.
+2. Click on the **My Applets** tab and create a **New Applet**.
+    <figure>
+      <img src="/img/2017-08-02-shell-commands-assistant/IFTTT_new_applet.png" alt="image alt">
+      <figcaption>Figure 4: Create a new applet in IFTTT</figcaption>
+    </figure>
+3. Click on **this**
+    <figure>
+      <img src="/img/2017-08-02-shell-commands-assistant/IFTTT_this_button.png" alt="image alt">
+      <figcaption>Figure 5: It wasn't obvious enough..</figcaption>
+    </figure>
+4. Search and connect with "Google Assistant" (grant permission to the Google account you use with Google Assistant)
+5. Choose the trigger "Say a simple phrase"
+6. Write a custom voice command phrase and a response phrase for the Assistant
+    <figure style="margin-bottom: 0;">
+      <img src="/img/2017-08-02-shell-commands-assistant/IFTTT_assistant_trigger.png" alt="image alt" style="width: 50%;">
+    </figure>
+    <figure style="margin-top: 0;">
+      <figcaption>Figure 6: Words can hurt</figcaption>
+    </figure>
+7. Click on **that**. Search, select, connect to "Webhooks" and click on "Make a web request".
+8. In **URL**, type:  
+    `http://<Raspberry-Pi-IP>:8123/api/services/shell_command/<command_name>?api_password=<your-password>`,  
+    e.g. `http://192.168.1.101:8123/api/services/shell_command/test_cmd?api_password=PASSWORD`
+9. Choose `POST` for **Method**, `application/json` for **Content type** and click on "Create action". Click on "Finish" to complete the Applet.  
 
-[More coming soon: link Home Assistant with IFTTT and Google Assistant, trigger shell command service by Google Assistant. We are so close!]
+In the final part we need to enter the API key from IFTTT into the `configuration.yaml` file of our Home Assistant server.
+1. Still on the IFTTT webpage, navigate to "My Applets" > "Services" > "Webhooks" > "Settings".
+2. Copy the letter-number-jumble at the end of the URL
+    <figure>
+      <img src="/img/2017-08-02-shell-commands-assistant/IFTTT_api_key.png" alt="image alt">
+      <figcaption>Figure 7: IFTTT API key</figcaption>
+    </figure>
+3. Head over to the `configuration.yaml` file of Home Assistant and append a new entry:
+    ```sh
+    ifttt:
+      key: <your-API-KEY>
+    ```
+
+At long last, boot up your Google Assistant and say the magic words to run your shell command.
+
+<br><br>
+This has been quite a ride! From here on out the possibilities are endless. One of the many ways to impress your friends (and enemies?) is controlling your devices' electricity with your voice. [Join me]({{ site.baseurl }}/home%20automation/light-switch-assistant/) when we use relay modules and a couple wires to toggle ceiling lights, power plugs and more!

@@ -1,6 +1,6 @@
 ---
 layout: default
-modal-id: shell_commands_assistant
+modal-id: shell-commands-assistant
 date: 2017-08-02
 img: default.png
 project-date: August 2017
