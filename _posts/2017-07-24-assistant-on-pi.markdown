@@ -16,8 +16,8 @@ The Google Assistant will be implemented on a Raspberry Pi, which makes it a pot
 This project contains a variety of features among which are:
 - Google Assistant running on a Raspberry Pi (covered in this post)
 - Use a bluetooth remote to initiate request to Google Assistant \([link]({{ site.baseurl }}/home%20automation/BT-control-assistant/)\)
-- Execute shell commands with Google Assistant + IFTTT + Home Assistant with voice commands \([link]()\)
-- Switch on/off devices and ceiling lights with voice commands \([link]({{ site.baseurl }}/home%20automation/light-switch-assistant/)\)
+- Execute shell commands with Google Assistant + IFTTT + Home Assistant with voice commands \([link]({{ site.baseurl }}/home%20automation/shell-commands-assistant/)\)
+- Switch on/off home devices and ceiling lights with voice commands \([link]({{ site.baseurl }}/home%20automation/light-switch-assistant/)\)
 
 If you want to use this post as a guide or inspiration for your own projects, I am going to assume that you are already somewhat familiar with Linux systems and the Raspberry Pi, although I will try to mention all important details on what I did. Alright, let's get right to it!
 

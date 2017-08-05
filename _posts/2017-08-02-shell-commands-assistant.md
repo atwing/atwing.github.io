@@ -198,4 +198,4 @@ In the final part we need to enter the API key from IFTTT into the `configuratio
 At long last, boot up your Google Assistant and say the magic words to run your shell command.
 
 <br><br>
-This has been quite a ride! From here on out the possibilities are endless. One of the many ways to impress your friends (and enemies?) is controlling your devices' electricity with your voice. [Join me]({{ site.baseurl }}/home%20automation/light-switch-assistant/) when we use relay modules and a couple wires to toggle ceiling lights, power plugs and more!
+This has been quite a ride! From here on out the possibilities are endless. One of the many ways to impress your friends (and enemies?) is controlling your home devices' electricity with your voice. [Join me]({{ site.baseurl }}/home%20automation/light-switch-assistant/) when we use relay modules and a couple wires to toggle ceiling lights, wall outlets and more!
