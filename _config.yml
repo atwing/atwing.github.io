@@ -40,7 +40,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: Anthony Nguyen
+  copyright: "Anthony Nguyen. Powered by Jekyll and the Freelancer & Minimal Mistakes theme"
   #location: Location
   social: Around the Web
   #credits: Credits
