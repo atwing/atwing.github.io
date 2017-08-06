@@ -17,7 +17,7 @@ This project contains a variety of features among which are:
 - Google Assistant running on a Raspberry Pi (covered in this post)
 - Use a bluetooth remote to initiate request to Google Assistant \([link]({{ site.baseurl }}/home%20automation/BT-control-assistant/)\)
 - Execute shell commands with Google Assistant + IFTTT + Home Assistant with voice commands \([link]({{ site.baseurl }}/home%20automation/shell-commands-assistant/)\)
-- Switch on/off home devices and ceiling lights with voice commands \([link]({{ site.baseurl }}/home%20automation/light-switch-assistant/)\)
+- Control home devices and ceiling lights with voice commands \([link]({{ site.baseurl }}/home%20automation/light-switch-assistant/)\)
 
 If you want to use this post as a guide or inspiration for your own projects, I am going to assume that you are already somewhat familiar with Linux systems and the Raspberry Pi, although I will try to mention all important details on what I did. Alright, let's get right to it!
 
@@ -73,7 +73,7 @@ We need to create a Google Developer Project, grant the Raspberry Pi access to t
 $ scp <path to file>/client_secret_<client-id>.json pi@<raspberry-pi-ip-address>:/home/pi/
 ```
 
-After switching on all necessary activity controls, we arrive at the final step.
+After enabling all necessary activity controls, we arrive at the final step.
 
 ### Step 4: Install Google Assistant SDK and run demo
 

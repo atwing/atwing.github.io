@@ -4,15 +4,15 @@ date: 2017-08-05
 img:
 project-date: August 2017
 category: Home Automation
-title: Switch lights & home devices with your voice
-excerpt: Don't you hate it when you enter a dark room and hit your toe on furniture while searching for the light switch? Switch lights and power plugs on/off with your voice using relay modules, a Raspberry Pi and Google Assistant today!
+title: Control lights & home devices with your voice
+excerpt: Don't you hate it when you enter a dark room and hit your toe on furniture while searching for the light switch? Control lights and power plugs with your voice using relay modules, a Raspberry Pi and Google Assistant today!
 ---
 
 {% include toc title="Contents" icon="list" %}
 
 Most of us have already been there. You had a long and productive day and now it is time to have a good rest. You go on a light switch hunt, because it inconveniently went on a night stroll again and \*BAM!\*, your pinky toe decided to remind you that its only reason of existence is to let you **FEEL** its existence. Next thing you know a war breaks out, every volcano on earth erupts at once and our planet flies straight to the center of the sun. All of this because a light switch didn't do its job properly. We cannot waste another second - let us join forces in a rebellion against the source of all evil!  
 
-If you have the exact same thought in mind as me or fight for an even greater cause, you are at the right place. Switching home devices using relay modules is fairly quickly built up. We only need a few hardware components which don't take too long to assemble and the code to control our system is a handful of Python lines.
+If you have the exact same thought in mind as me or fight for an even greater cause, you are at the right place. Controlling home devices using relay modules is fairly quickly built up. We only need a few hardware components which don't take too long to assemble and the code to control our system is a handful of Python lines.
 
 **Warning**: You will be working with mains electricity which can seriously injure you. Please use extreme caution and if you're not absolutely certain, ask someone who is. Saving one or two questions isn't worth endangering your life.
 {: .notice--danger}
