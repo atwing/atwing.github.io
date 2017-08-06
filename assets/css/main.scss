@@ -14,3 +14,11 @@
     border: thin solid;
     border-color: {{ site.color.image-border }};
 }
+
+.a-copy {
+    text-decoration: none;
+    color: #{{ site.color.primary}};
+}
+.a-copy:hover {
+    text-decoration: underline;
+}

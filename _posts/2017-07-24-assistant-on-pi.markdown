@@ -91,4 +91,4 @@ $ google-assistant-demo
 </figure>
 
 <br><br>
-Feel free to post questions/comments/suggestions, let me know if you run into any trouble!
+Feel free to post questions/comments/suggestions and let me know if you run into any trouble!
