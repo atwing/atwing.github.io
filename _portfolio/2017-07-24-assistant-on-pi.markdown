@@ -1,6 +1,6 @@
 ---
 layout: default
-modal-id: assistant-pi
+modal-id: assistant-on-pi
 date: 2017-07-24
 img: teaser_assistant_pi.png
 project-date: July 2017

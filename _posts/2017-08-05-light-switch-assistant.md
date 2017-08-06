@@ -2,7 +2,6 @@
 modal-id: light-switch-assistant
 date: 2017-08-05
 img:
-alt: image-alt
 project-date: August 2017
 category: Home Automation
 title: Switch lights & home devices with your voice
