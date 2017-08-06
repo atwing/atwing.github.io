@@ -83,7 +83,7 @@ $ sudo -u homeassistant -H /srv/homeassistant/bin/hass
 To see if the Home Assistant server is running, launch `http://<Rasperry-Pi-IP>:8123` on another computer in your web browser or `http://localhost:8123` if your Raspberry Pi has a GUI and a web browser.
 
 <figure>
-  <img src="/img/2017-08-02-shell-commands-assistant/HA_web_interface.png" alt="image alt">
+  <img src="/img/2017-08-02-shell-commands-assistant/HA_web_interface.png" alt="image alt" class="ImageBorder">
   <figcaption>Figure 1: Home Assistant, up and ready </figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ Save and reboot your Home Assistant server.
 Log into the web interface with the password you wrote into `configuration.yaml`. In the sidebar on the left under **Developer Tools**, click the left-most button which reads "Services".
 
 <figure>
-  <img src="/img/2017-08-02-shell-commands-assistant/HA_services.png" alt="image alt">
+  <img src="/img/2017-08-02-shell-commands-assistant/HA_services.png" alt="image alt" class="ImageBorder">
   <figcaption>Figure 2: Services menu of Home Assistant web interface</figcaption>
 </figure>
 
@@ -158,12 +158,12 @@ Almost there! Now that we got the shell command service running, we only need to
 1. Head over to the [IFTTT web page](https://ifttt.com/) and create an account.
 2. Click on the **My Applets** tab and create a **New Applet**.
     <figure>
-      <img src="/img/2017-08-02-shell-commands-assistant/IFTTT_new_applet.png" alt="image alt">
+      <img src="/img/2017-08-02-shell-commands-assistant/IFTTT_new_applet.png" alt="image alt" class="ImageBorder">
       <figcaption>Figure 4: Create a new applet in IFTTT</figcaption>
     </figure>
 3. Click on **this**
     <figure>
-      <img src="/img/2017-08-02-shell-commands-assistant/IFTTT_this_button.png" alt="image alt">
+      <img src="/img/2017-08-02-shell-commands-assistant/IFTTT_this_button.png" alt="image alt" class="ImageBorder">
       <figcaption>Figure 5: It wasn't obvious enough..</figcaption>
     </figure>
 4. Search and connect with "Google Assistant" (grant permission to the Google account you use with Google Assistant)
@@ -185,7 +185,7 @@ In the final part we need to enter the API key from IFTTT into the `configuratio
 1. Still on the IFTTT webpage, navigate to "My Applets" > "Services" > "Webhooks" > "Settings".
 2. Copy the letter-number-jumble at the end of the URL
     <figure>
-      <img src="/img/2017-08-02-shell-commands-assistant/IFTTT_api_key.png" alt="image alt">
+      <img src="/img/2017-08-02-shell-commands-assistant/IFTTT_api_key.png" alt="image alt" class="ImageBorder">
       <figcaption>Figure 7: IFTTT API key</figcaption>
     </figure>
 3. Head over to the `configuration.yaml` file of Home Assistant and append a new entry:

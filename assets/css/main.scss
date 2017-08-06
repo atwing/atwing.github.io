@@ -8,3 +8,9 @@
 {% include css/main.css %}
 
 @import "minimal-mistakes";
+
+/* Custom styles */
+.ImageBorder {
+    border: thin solid;
+    border-color: {{ site.color.image-border }};
+}
