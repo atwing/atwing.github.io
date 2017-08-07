@@ -170,7 +170,7 @@ Almost there! Now that we got the shell command service running, we only need to
 5. Choose the trigger "Say a simple phrase"
 6. Write a custom voice command phrase and a response phrase for the Assistant
     <figure style="margin-bottom: 0;">
-      <img src="/img/2017-08-02-shell-commands-assistant/IFTTT_assistant_trigger.png" alt="image alt" style="width: 50%;">
+      <img src="/img/2017-08-02-shell-commands-assistant/IFTTT_assistant_trigger.png" alt="image alt" style="width: 50%;" class="ImageBorder">
     </figure>
     <figure style="margin-top: 0;">
       <figcaption>Figure 6: Words can hurt</figcaption>
