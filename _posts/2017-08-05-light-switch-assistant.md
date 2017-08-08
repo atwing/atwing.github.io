@@ -1,10 +1,11 @@
 ---
 modal-id: light-switch-assistant
 date: 2017-08-05
-img:
+header:
+  overlay_image: /img/projects/teaser_light_switch_static.png
 project-date: August 2017
 category: Home Automation
-title: Control lights & home devices with your voice
+title: Control lights & home devices using voice commands
 excerpt: Don't you hate it when you enter a dark room and hit your toe on furniture while searching for the light switch? Control lights and power plugs with your voice using relay modules, a Raspberry Pi and Google Assistant today!
 ---
 

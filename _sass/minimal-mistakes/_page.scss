@@ -39,6 +39,7 @@
 .page__title {
   margin-top: 0;
   line-height: 1;
+  margin-bottom: 0;
 
   & + .page__meta {
     margin-top: -0.5em;
@@ -121,7 +122,7 @@
   &--overlay {
     position: relative;
     margin-bottom: 2em;
-    padding: 3em 0;
+    padding: 10em 0 0 0;
     @include clearfix;
     background-size: cover;
     background-repeat: no-repeat;
@@ -138,10 +139,16 @@
     .wrapper {
       padding-left: 1em;
       padding-right: 1em;
+      padding-top: 1em;
+      padding-bottom: 2em;
 
       @include breakpoint($x-large) {
         max-width: $x-large;
       }
+    }
+
+    .wrapper-back {
+        background-color: rgba(0, 0, 0, 0.3);
     }
 
     .page__title,
@@ -149,7 +156,7 @@
     .page__lead,
     .btn {
       color: #fff;
-      text-shadow: 1px 1px 4px rgba(#000, 0.5);
+      /* text-shadow: 1px 1px 4px rgba(#000, 0.5); */
     }
 
     .page__lead {
@@ -160,7 +167,7 @@
       font-size: $type-size-2;
 
       @include breakpoint($small) {
-        font-size: $type-size-1;
+        font-size: $type-size-2;
       }
     }
   }

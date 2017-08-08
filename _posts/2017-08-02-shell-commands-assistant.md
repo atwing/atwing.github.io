@@ -1,10 +1,12 @@
 ---
 modal-id: shell-commands-assistant
 date: 2017-08-02
-img:
+header:
+  overlay_image:
+  overlay_color: "#6F8398"
 project-date: August 2017
 category: Home Automation
-title: Run shell commands and boot your computer using voice commands
+title: Run shell commands and boot your computer with your voice
 excerpt: Combining Google Assistant, IFTTT and Home Assistant provides us access to a powerful tool&#58; Voice-activated shell commands. No more getting up from the couch and physically control devices. Calories have rights too and we should stop burning them. Let's go!
 ---
 

@@ -1,10 +1,12 @@
 ---
 modal-id: bt-remote-assistant
 date: 2017-07-28
-img: teaser_bt_remote.png
+header:
+  overlay_image: /img/projects/teaser_bt_remote.png
+  teaser:
 project-date: July 2017
 category: Home Automation
-title: Start Google Assistant via Bluetooth remote
+title: Start Google Assistant via Bluetooth Remote
 excerpt: Hotword detection is an impressive and convenient feature, but has with a big drawback&#58; it comes at the price of sacrificing part of our privacy. To address this issue, we can use a Bluetooth remote button to trigger a query.
 ---
 
