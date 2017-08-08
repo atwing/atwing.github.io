@@ -29,7 +29,9 @@ For this project you need:
 - Voltage tester
 
 ### Step 1: Wiring relay module with Raspberry Pi
-The relay modules we use will typically contain a mechanical metal switch which is controlled by an electromagnetic coil. Upon feeding power through the coil, the switch is moved to its alternate position. For the ceiling lights, we can use this two-way switch to keep the manual switches intact when adding the voice control feature. But this will heavily depend on how your lights switches have been wired up. Some will have the lights and switched directly connected to the mains, while others have a separate circuit for the switches and thus safer system for the installer. Either way, you should disconnect the power source by **shutting off the appropriate breaker or fuse in the fuse box**. More on this later.  
+Note: In this post I will use the American terminology for the switches. Refer to [this page](https://en.wikipedia.org/wiki/Switch#contact_terminology) for their alternate names.
+{: .notice--info}  
+The relay modules we use will typically contain a mechanical metal switch which is controlled by an electromagnetic coil. Upon feeding power through the coil, the switch is moved to its alternate position. For the ceiling lights, we can use this three-way switch (SPDT) to keep the manual switches intact when adding the voice control feature. But this will heavily depend on how your lights switches have been wired up. Some will have the lights and switched directly connected to the mains, while others have a separate circuit for the switches and thus safer system for the installer. Either way, you should disconnect the power source by **shutting off the appropriate breaker or fuse in the fuse box**. More on this later.  
 
 We will start off by connecting the relay module with the Raspberry Pi. Locate the set of pins that contains a GND, VCC and a IN# pin for every channel on your module. We connect the GND pin with a ground pin and the VCC with a 5V pin on the Raspberry Pi. Then connect a GPIO pin from the RasPi to the input pin of the channel you want to control. E.g. I used the GPIO2 pin to control the relay on channel 1, like so:  
 
@@ -39,7 +41,7 @@ We will start off by connecting the relay module with the Raspberry Pi. Locate t
 </figure>
 
 ### Step 2: Connect with target device
-Next, we hook up the device we intend to control to the relay. Wiring with ceiling lamps is a bit tricky, so we will use a simple power strip for now. If you want to know how to connect your ceiling lights, refer to the [appendix]().  
+Next, we hook up the device we intend to control to the relay. Wiring with ceiling lamps is a bit tricky, so we will use a simple power strip for now. If you want to know how to connect your ceiling lights, refer to the [appendix](http://localhost:4000/home%20automation/light-switch-assistant/#appendix-ceiling-lights-circuit).  
 
 We will have to cut open the power strip wire, so ideally you want to use an old power strip which needs a "new haircut" anyway.  
 Cut the power strip cable into two parts. Depending on what type of cable you have, you will find three wires: Blue(Neutral), Brown(Live/Line/Hot), Green/Yellow(Earth/Ground). Remove approx. 1cm insulation from each of all six ends and twist the ends. Reconnect the Neutral and Earth wires with connector blocks and plug the Live wires into the relay block. It doesn't really matter which sockets you use as long one wire goes into the middle socket:
@@ -77,7 +79,7 @@ GPIO.output(2, False)
 Run the script with `python relay_on.py` to test your setup.  
 Change the number in `GPIO.setup()` and `GPIO.output()` of both scripts if you selected a different pin to control the relay channel. If your device still wont turn on, try changing the boolean value in `GPIO.output()` to `True`. This will depend on which relay sockets you chose.  
 
-Note: In Python you can choose between GPIO numbering (GPIO.BCM) and physical numbering (GPIO.BOARD). The first way uses the labels as the computer sees them while the latter counts the pins across as you see them. If you use this script on different Raspberry Pi models, you might want to the physical numbering system, which didn't change over the different models.
+Note: In Python you can choose between GPIO numbering (GPIO.BCM) and physical numbering (GPIO.BOARD). The first option uses the labels as the computer sees them while the latter counts the pins across as you see them. If you use this script on different Raspberry Pi models, you might want to the physical numbering system, which didn't change over the different models.
 {: .notice--info}
 
 Create a second file named e.g. **relay_off.py** which contains:
@@ -100,26 +102,57 @@ If you can run [shell commands with your voice], you can now tell your digital a
 
 ### Appendix: Ceiling lights circuit
 First we need to determine what kind of circuit you have within your walls, except if you wired everything yourself - but then again you probably wouldn't read this part if you did.  
-There are a lot of ways to setup a lighting system. I will list the most common ways I encountered and write how to add our custom switch to it.
+There are a lot of ways to setup a lighting system. I will list the most common systems I encountered and write how to add our custom switch to it. When dismantling the light switch from the wall, you should be able to determine which system is installed in your room.
 
-#### One-way switch
+**Warning**: Remember to turn off the appropriate breaker or fuse in the fuse box before tinkering with the light switches.
+{: .notice--danger}
+
+#### Two-way switch
 <figure>
-  <img src="/img/2017-08-05-light-switch-assistant/Oneway-lighting-circuit.png" alt="image alt" style="width: 75%">
-  <figcaption>Figure 4: Circuit with one-way switch</figcaption>
+  <img src="/img/2017-08-05-light-switch-assistant/Twoway-lighting-circuit.png" alt="image alt" style="width: 75%" class="ImageBorder">
+  <figcaption>Figure 4: Circuit with two-way switch</figcaption>
 </figure>
+
+This is the simplest layout and unfortunately you wont be able to just add a custom switch while leaving the existing one operational (at least I wasn't smart enough to come up with a solution). You either would have to replace the existing switch, which means if the voice switch fails, you wont be able to control the lights. Otherwise you could replace the two-way switch (SPST, single pole single throw) with a three-way switch (SPDT, single pole double throw) and run two wires between it and the relay block. The resulting circuit would look similar to the Figure 5 below, without **SW2** & **SW3** and e.g. **SW4** replaced with the relay switch. The wire from the lamp would go into the relay's middle socket while the two wires from the three-way switch in **SW1** would go into the left & right socket.
 
 #### Serial lighting circuit
 <figure>
-  <img src="/img/2017-08-05-light-switch-assistant/Serial-lighting-circuit.png" alt="image alt">
+  <img src="/img/2017-08-05-light-switch-assistant/Serial-lighting-circuit.png" alt="image alt" class="ImageBorder">
   <figcaption>Figure 5: Serial circuit</figcaption>
 </figure>
 
-#### Parallel lighting circuit with relay unit
+If you already have a circuit with multi-way switches in your room, we can reconstruct a four-way switch (DPDT, double pole double throw) with two relay blocks to get a component similar to **SW2** and **SW3**. Plug each of the two wires coming from **SW1** into the middle slots of separate relay blocks. The two wires from the next switch (e.g. **SW2**) go into the left and right slot of one relay channel. From the same slots you run two additional wires into the second relay channel but interchanged, i.e. left from the first into the right of the second and right of the first into the left of the second. As always, a picture is worth a thousand words:  
+
 <figure>
-  <img src="/img/2017-08-05-light-switch-assistant/Parallel-lighting-circuit.png" alt="image alt">
-  <figcaption>Figure 6: Parallel circuit</figcaption>
+  <img src="/img/2017-08-05-light-switch-assistant/Relay-block-serial.png" alt="image alt" class="ImageBorder">
+  <figcaption>Figure 6: Relay blocks in a serial lighting circuit</figcaption>
 </figure>
 
-[Finishing touches coming soon. They missed the bus. Oh boy!]
+In the Python script, set both relays to the same boolean value at the same time to simulate a four-way switch.  
+
+#### Parallel lighting circuit with relay unit
+<figure>
+  <img src="/img/2017-08-05-light-switch-assistant/Parallel-lighting-circuit.png" alt="image alt" class="ImageBorder">
+  <figcaption>Figure 7: Parallel circuit</figcaption>
+</figure>
+
+This one is fairly simple to set up. Every time the upper circuit is closed, a relay unit switches its state and opens or closes the lower circuit.  
+We install one relay block in parallel to one of the switches. One wire from each connector on the switch go the middle and an arbitrary side socket of the relay block.  
+To toggle the lights, you close the circuit once and open it after a short delay. Example Python script:
+```py
+import RPi.GPIO as GPIO
+import time
+
+# refer to pins by the "Broadcom SOC channel" number
+GPIO.setmode(GPIO.BCM)
+# set GPIO2 to output
+GPIO.setup(2, GPIO.OUT)
+# close circuit
+GPIO.output(2, False)
+# small delay, otherwise relay wont register value change
+time.sleep(0.5)
+# reopen circuit
+GPIO.output(2, True)
+```
 
 <br><br>
