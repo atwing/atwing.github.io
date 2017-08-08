@@ -6,7 +6,7 @@ header:
   overlay_color: "#6F8398"
 project-date: July 2017
 category: Home Automation
-title: Custom Audio Response for Google Assistant
+title: Custom audio response for Google Assistant
 excerpt: Triggering Google Assistant on your own device without hotword detection does not give a trigger response. This entry intends to fix this by adding a custom audio response every time a conversation is started.
 ---
 
