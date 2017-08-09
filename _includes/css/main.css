@@ -241,7 +241,9 @@ section.success {
 }
 
 #portfolio .caption-title {
-    padding: 55% 1.5em 0;
+    font-size: 17px;
+    text-align: center;
+    padding: 53% 1.5em 0;
     color: #fff;
 }
 
