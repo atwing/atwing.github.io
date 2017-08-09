@@ -157,6 +157,9 @@ GPIO.output(2, False)
 time.sleep(0.5)
 # reopen circuit
 GPIO.output(2, True)
+# clean exit
+GPIO.cleanup()
 ```
 
 <br><br>
+This concludes the relay module implementation with single board computers. Have fun tinkering and always stay safe! I would love to hear about what you put together. See you next time!
