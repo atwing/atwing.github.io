@@ -137,6 +137,9 @@ In the Python script, set both relays to the same boolean value at the same time
   <figcaption>Figure 7: Parallel circuit</figcaption>
 </figure>
 
+Note: The voltage values in the upper circuit are just an example. It could even have a higher value if you are working on an unusual system. Check if it is VAC first. If your multimeter says 0V, then it is probably VDC. The other way round is also applicable.  
+{: .notice--warning}
+
 This one is fairly simple to set up. Every time the upper circuit is closed, a relay unit switches its state and opens or closes the lower circuit.  
 We install one relay block in parallel to one of the switches. One wire from each connector on the switch go the middle and an arbitrary side socket of the relay block.  
 To toggle the lights, you close the circuit once and open it after a short delay. Example Python script:
