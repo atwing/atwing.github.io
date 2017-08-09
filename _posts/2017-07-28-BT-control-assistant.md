@@ -17,7 +17,7 @@ One quite cheap solution that I found is using Bluetooth remote buttons that cos
 
 ### Overview
 <figure>
-  <img src="/img/2017-07-28-BT-control-assistant/overview_setup.png">
+  <img src="/img/2017-07-28-BT-control-assistant/overview_setup.jpg">
   <figcaption>Figure 1: Setup overview</figcaption>
 </figure>
 

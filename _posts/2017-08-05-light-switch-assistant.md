@@ -20,7 +20,7 @@ If you have the exact same thought in mind as me or fight for an even greater ca
 
 ### Overview
 <figure>
-  <img src="/img/2017-08-05-light-switch-assistant/overview_setup.png">
+  <img src="/img/2017-08-05-light-switch-assistant/overview_setup.jpg">
   <figcaption>Figure 1: Setup overview</figcaption>
 </figure>
 
