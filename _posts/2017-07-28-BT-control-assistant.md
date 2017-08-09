@@ -16,7 +16,10 @@ After successfully running the Google Assistant on the [Raspberry Pi]({{ site.ba
 One quite cheap solution that I found is using Bluetooth remote buttons that cost less than [two bucks online](https://www.amazon.com/UFCIT-Bluetooth-Wireless-Control-Smartphones/dp/B00LUNAA2O/) and with Bluetooth LE the electricity bill will be happy too. Additionally it is easy to carry around, e.g. with your key ring. Four birds with one stone? So many birds!
 
 ### Overview
-[IMAGE: setup overview with assistant pi and bluetooth button]
+<figure>
+  <img src="/img/2017-07-28-BT-control-assistant/overview_setup.png">
+  <figcaption>Figure 1: Setup overview</figcaption>
+</figure>
 
 Pretty much the same setup as the previous part.  
 
@@ -44,7 +47,7 @@ $ bluetoothctl
 
 <figure>
   <img src="/img/2017-07-28-BT-control-assistant/scan_bt.gif" alt="image alt">
-  <figcaption>Figure 1: Scan for Bluetooth devices ... successful!</figcaption>
+  <figcaption>Figure 2: Scan for Bluetooth devices ... successful!</figcaption>
 </figure>
 
 Note: You might need to run `sudo bluetoothctl`, depending on your user rights.
@@ -56,7 +59,7 @@ The device should show up as **AB Shutter 3** or similar. Let us take a closer l
 
 <figure>
   <img src="/img/2017-07-28-BT-control-assistant/bt_device_info.png" alt="image alt">
-  <figcaption>Figure 2: Bluetooth remote details</figcaption>
+  <figcaption>Figure 3: Bluetooth remote details</figcaption>
 </figure>
 
 It is registered as a keyboard.  We should keep this in mind if we later want to control the Google Assistant with it. Time to connect to it:
@@ -69,7 +72,7 @@ It is registered as a keyboard.  We should keep this in mind if we later want to
 
 <figure>
   <img src="/img/2017-07-28-BT-control-assistant/bt_connect.png" alt="image alt">
-  <figcaption>Figure 3: Successful link with <b>AB Shutter 3</b></figcaption>
+  <figcaption>Figure 4: Successful link with <b>AB Shutter 3</b></figcaption>
 </figure>
 
 Note: You can use tab completion and don't need to type in the full address. Use `pair` and `trust` for it to automatically reconnect in the future and `connect` to complete the connection.
@@ -91,7 +94,7 @@ Comments to script: We basically load a list of input devices connect to our sys
 
 <figure>
   <img src="/img/2017-07-28-BT-control-assistant/test_bt_trigger.png" alt="image alt">
-  <figcaption>Figure 4: Testing output of <b>AB Shutter 3</b></figcaption>
+  <figcaption>Figure 5: Testing output of <b>AB Shutter 3</b></figcaption>
 </figure>
 
 Apparently the keys simulate the "Enter" key and the "Volume Up" key. But that wont be a problem, as the `grab()` function prevents it from messing with other programs.  
@@ -105,7 +108,7 @@ After that, run `python3 pushtotalk.py` from the files you just copied and press
 
 <figure>
   <img src="/img/2017-07-28-BT-control-assistant/test_pushtotalk.png" alt="image alt">
-  <figcaption>Figure 5: Testing <b>pushtotalk.py</b></figcaption>
+  <figcaption>Figure 6: Testing <b>pushtotalk.py</b></figcaption>
 </figure>
 
 Note: The SoundDeviceStream warning occurs when recorded frames are lost between reading iterations according to the [**sounddevice** documentation](http://python-sounddevice.readthedocs.io/en/0.3.8/index.html?highlight=overflow#sounddevice.Stream.read). These can be ignored if they only occur when starting the program, as was in my case. If they turn out to be a problem, try increasing the iteration and block size and see if it helps, e.g. `python3 pushtotalk.py --audio-iter-size=4000 --audio_block_size=8000`. I got less frame losses after this but I couldn't eliminate them completely.
@@ -131,7 +134,7 @@ I uploaded the code as `pushtotalk_BT.py` into the Git repo. You will also need 
 
 <figure>
   <img src="/img/2017-07-28-BT-control-assistant/pushtotalk_BT.png" alt="image alt">
-  <figcaption>Figure 6: She replied "Sorry, I don't understand"... </figcaption>
+  <figcaption>Figure 7: She replied "Sorry, I don't understand"... </figcaption>
 </figure>
 
 <br><br>

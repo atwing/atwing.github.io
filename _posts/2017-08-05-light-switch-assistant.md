@@ -19,7 +19,10 @@ If you have the exact same thought in mind as me or fight for an even greater ca
 {: .notice--danger}
 
 ### Overview
-[IMAGE: RL foto of setup]  
+<figure>
+  <img src="/img/2017-08-05-light-switch-assistant/overview_setup.png">
+  <figcaption>Figure 1: Setup overview</figcaption>
+</figure>
 
 In the previous posts we have been implementing Google Assistant on a Raspberry Pi and use it to run [shell commands using our voice]({{ site.baseurl }}/home%20automation/shell-commands-assistant/). I will use that setup to switch different devices with voice commands but naturally you will be able to execute the Python script any way you want. This post only covers the hardware installation with the relay module up to the execution of the controlling script. If you want to know how to run the script with your voice, please refer to my [previous guide]({{ site.baseurl }}/home%20automation/shell-commands-assistant/).
 
