@@ -2,7 +2,9 @@ language: ruby
 rvm:
 - 2.3.3
 
-install: gem install jekyll
+install: 
+  - gem install jekyll
+  - gem install jekyll-paginate
 script: jekyll build
 
 sudo: false
