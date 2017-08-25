@@ -53,6 +53,8 @@ social-boot:
     url: https://www.linkedin.com/in/atwing
   - title: key
     url: https://keybase.io/atwing
+  - title: facebook
+    url: https://www.facebook.com/atpwing
 
 
 # Postal address (add as many lines as necessary)
@@ -149,7 +151,7 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : atpwing
   foursquare       :
   github           : atwing
   gitlab           :
