@@ -2,7 +2,7 @@
 layout: default
 modal-id: shell-commands-assistant
 date: 2017-08-02
-img: default.png
+img: teaser_shell_commands.png
 project-date: August 2017
 category: Home Automation
 title: Run shell commands and boot your computer with your voice

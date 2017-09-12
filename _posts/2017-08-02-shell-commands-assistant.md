@@ -2,8 +2,8 @@
 modal-id: shell-commands-assistant
 date: 2017-08-02
 header:
-  overlay_image:
-  overlay_color: "#6F8398"
+  overlay_image: /img/projects/teaser_shell_commands
+  teaser:
 project-date: August 2017
 category: Home Automation
 title: Run shell commands and boot your computer with your voice
