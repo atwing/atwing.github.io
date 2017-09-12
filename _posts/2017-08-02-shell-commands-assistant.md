@@ -2,7 +2,7 @@
 modal-id: shell-commands-assistant
 date: 2017-08-02
 header:
-  overlay_image: /img/projects/teaser_shell_commands
+  overlay_image: /img/projects/teaser_shell_commands.png
   teaser:
 project-date: August 2017
 category: Home Automation
