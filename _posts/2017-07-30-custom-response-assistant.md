@@ -2,8 +2,8 @@
 modal-id: custom-response-assistant
 date: 2017-07-30
 header:
-  overlay_image:
-  overlay_color: "#6F8398"
+  overlay_image: /img/projects/teaser_custom_response.png
+  overlay_color: 
 project-date: July 2017
 category: Home Automation
 title: Custom audio response for Google Assistant
