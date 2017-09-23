@@ -49,8 +49,8 @@ footer:
 social-boot:
   - title: github
     url: http://github.com/atwing
-  #- title: linkedin
-  #  url: https://www.linkedin.com/in/atwing
+  - title: linkedin
+    url: https://www.linkedin.com/in/atwing
   #- title: key
   #  url: https://keybase.io/atwing
   - title: facebook
