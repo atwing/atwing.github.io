@@ -25,6 +25,10 @@ a.active {
     color: #{{ site.color.primary }};
 }
 
+a.front-about{
+    color: #{{ site.color.secondary }};
+}
+
 h1,
 h2,
 h3,

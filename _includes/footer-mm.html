@@ -1,6 +1,6 @@
     <!-- Footer -->
     <footer class="text-center">
-        <div class="footer-above">
+        <div class="footer-above mm">
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
@@ -17,9 +17,12 @@
                         <ul class="list-inline" style="font-size: 15px; font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;">
                             {% for network in site.social-boot %}
                             <li style="margin-bottom: 0px;">
-                                <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
+                                <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}" aria-hidden="true"></i></a>
                             </li>
 		                    {% endfor %}
+                            <li style="margin-bottom: 0px;">
+                                <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}" class="btn-social btn-outline"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i></a>
+                            </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">

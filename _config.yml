@@ -2,7 +2,7 @@
 title: Anthony Nguyen
 email:
 url: "https://www.atwing.net"
-description: "Machine Learning, Telecommunication, Home Automation, Information Security"
+description: "Machine Learning, Home Automation, Information Security"
 keywords: "Blog, Machine Learning, Telecommunication, Home Automation, Information Security, Raspberry Pi, Google Assistant SDK, Speech Technology, Computer Vision"
 skills: Machine Learning Engineer
 meta_author: Anthony Nguyen
@@ -42,17 +42,17 @@ color:
 footer:
   copyright: Anthony Nguyen<br>Powered by <a href="http://jekyllrb.com/" class="a-copy">Jekyll</a> and the <a href="https://jeromelachaud.github.io/freelancer-theme/" class="a-copy">Freelancer</a> & <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" class="a-copy">Minimal Mistakes</a> theme<br>Hosted by <a href="https://pages.github.com/" class="a-copy">GitHub</a> and served by <a href="https://www.cloudflare.com/" class="a-copy">Cloudflare</a>
   #location: Location
-  social: Around the Web
+  social: Follow
   #credits: Credits
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social-boot:
   - title: github
     url: http://github.com/atwing
-  - title: linkedin
-    url: https://www.linkedin.com/in/atwing
-  - title: key
-    url: https://keybase.io/atwing
+  #- title: linkedin
+  #  url: https://www.linkedin.com/in/atwing
+  #- title: key
+  #  url: https://keybase.io/atwing
   - title: facebook
     url: https://www.facebook.com/atpwing
 
@@ -200,7 +200,6 @@ exclude:
   - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
@@ -309,3 +308,10 @@ defaults:
       comments: true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true

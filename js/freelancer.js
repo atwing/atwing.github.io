@@ -36,20 +36,25 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
+// Custom entries//
+
 // Direct link to modal windows
 /**
  * Function to open a bootstrap modal based on ID
  * @param int
  */
+
+/*
 function directLinkModal(hash) {
   $(hash).modal('show');
 }
+*/
 
 /**
  * Call the function on window load
  * @param hash of the window
  */
-directLinkModal(window.location.hash);
+//directLinkModal(window.location.hash);
 
 // hide scroll-top button after scrolling 100px down
 $(document).scroll(function () {
@@ -59,5 +64,4 @@ $(document).scroll(function () {
     } else {
         $('.visible-sm').fadeOut();
     }
-
 });
