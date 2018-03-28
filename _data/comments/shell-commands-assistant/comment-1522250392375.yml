@@ -1,0 +1,8 @@
+_id: 761e5860-329b-11e8-a0e7-edbb22c3159d
+message: "i got this error message \"homeassistant requires Python '>=3.5.3' but the running Python is 3.5.2\" when i run \"pip3 install --upgrade homeassistant\r\n\" command...."
+name: Jack Marshall
+email: 7ea36c338b76aba5031333513a71240b
+url: ''
+hidden: ''
+timestamp: 1522250392
+date: '2018-03-28T15:19:52.373Z'
