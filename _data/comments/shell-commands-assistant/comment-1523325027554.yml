@@ -1,0 +1,11 @@
+_id: 8aadcb60-3c61-11e8-8416-c58ae797a8c2
+message: >-
+  Followed all steps, but when I try to run the command from Google Assistant,
+  it doesn't go through.  IFTTT seems to be failing and gives ETIMEDOUT error. 
+  My shell command works from the Home Assistant web gui, and Google Assistant
+  provides the correct response to the IFTTT request.  Any help?
+name: James
+email: 3fb433645ae4fffea0799975d5c7e1ed
+url: ''
+hidden: ''
+date: '2018-04-10T01:50:27.553Z'
