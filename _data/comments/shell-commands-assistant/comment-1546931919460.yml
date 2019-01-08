@@ -1,0 +1,11 @@
+_id: 9ec4a840-1315-11e9-bddf-5fc5f93eb3d7
+message: >-
+  Let's suppose I have a script which requires an argument to be passed with it
+  & I want to fetch and feed it with Google Assistant. For Example test.sh
+  MY_ARG and I want to pass MY_ARG as an argument to my script. How can we
+  achieve that?
+name: Rudra pratap
+email: d273f59ac8fed27edba5bc9211146499
+url: ''
+hidden: ''
+date: '2019-01-08T07:18:39.459Z'
