@@ -1,0 +1,15 @@
+/* Remove background image and set pure black */
+.panel-cover {
+    background-image: none !important;
+    background-color: #000000 !important;
+    background: #000000 !important;
+}
+
+/* Optional: Make text easier to read on pure black */
+.panel-inverted {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.panel-cover--overlay {
+    background: rgba(0, 0, 0, 0.85) !important;
+}
